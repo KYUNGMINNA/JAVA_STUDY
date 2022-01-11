@@ -99,10 +99,16 @@ public class chapter1_variable {
         // 정수형 에서 실수형으로 형 변환 할때는 정확도 때문에 오차가 발생한다.
 
         //자동 형변환 byte->short or char -> int->long->float->double
+        //기존의 값을  최대한 보존 할 수 있는 타입으로 자동 형변환 한다.
+
+
+        //값의 범위가 작은 타입에서 큰 타입으로 형 변환은 생략 가능
+        
+
         //명시적 형변환
         char chs=(char)1000;
         System.out.println("명시적 형변환 -- char형 보다 큰 1000 이 저장되지만 의도적으로 사용하기위한방법 "+(chs));
-        
+
 
     }
 }

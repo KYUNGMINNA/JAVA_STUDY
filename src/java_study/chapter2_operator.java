@@ -33,6 +33,7 @@ public class chapter2_operator {
         System.out.println(as);
         System.out.println(!as);
 
+
         //논리 연산자
         System.out.println("논리 연산자");
         System.out.println("  x     y     &&     ||");
@@ -40,6 +41,14 @@ public class chapter2_operator {
         System.out.println(" true  false false  true ");
         System.out.println(" false true  false  true ");
         System.out.println(" false false true   false ");
+
+        //논리 비트 연산자
+        System.out.println("논리 비트 연산자");
+        System.out.println(" & --AND | --OR  ^--XOR  ");
+        System.out.println("1|1 ="+(1|1)+" 1&1 ="+(1&1)+" 1^1 ="+(1^1));
+        System.out.println("1|0 ="+(1|0)+" 1&0 ="+(1&0)+" 1^0 ="+(1^0));
+        System.out.println("0|1 ="+(0|1)+" 0&1 ="+(0&1)+" 0^1 ="+(0^1));
+        System.out.println("0|0 ="+(0|0)+" 0&0 ="+(0&0)+" 0^0 ="+(0^0));
 
         //단항 연산자
         System.out.println("후위형 -- 참조 후 증가");

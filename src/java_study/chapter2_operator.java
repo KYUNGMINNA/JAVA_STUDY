@@ -26,6 +26,21 @@ public class chapter2_operator {
         System.out.println("a==b "+(a==b));
         System.out.println("a!=b "+(a!=b));
 
+        //논리 연산자
+        System.out.println("논리 연산자");
+        System.out.println("  x     y     &&     ||");
+        System.out.println(" true  true  true   true ");
+        System.out.println(" true  false false  true ");
+        System.out.println(" false true  false  true ");
+        System.out.println(" false false true   false ");
+
+        //단항 연산자
+        System.out.println("후위형 -- 참조 후 증가");
+        System.out.println(" a=10 a++ "+(a++));
+        System.out.println(" a=10 a-- "+(a--));
+        System.out.println("전위형 -- 참조 전 증가");
+        System.out.println(" a=10 ++a "+(++a));
+        System.out.println(" a=10 --a "+(--a));
 
 
     }

@@ -91,6 +91,7 @@ public class chapter1_variable {
         System.out.printf("[%-20s]%n",asd);
         System.out.printf("[%.5s]%n",asd);
 
+        //입력
         Scanner scanner=new Scanner(System.in);
         String input=scanner.nextLine();
         int intnum=Integer.parseInt(input);

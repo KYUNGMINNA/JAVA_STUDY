@@ -97,13 +97,19 @@ public class chapter1_variable {
         int intnum=Integer.parseInt(input);
 
         // 정수형 에서 실수형으로 형 변환 할때는 정확도 때문에 오차가 발생한다.
+        int wjdtn=91234567;
+        float wjdtn2=(float)wjdtn;
+        System.out.println("정수 :"+wjdtn);
+        System.out.println("실수  "+wjdtn2);
+        System.out.println("정수 =(int)실수: "+(int)wjdtn2);
+
 
         //자동 형변환 byte->short or char -> int->long->float->double
         //기존의 값을  최대한 보존 할 수 있는 타입으로 자동 형변환 한다.
 
 
         //값의 범위가 작은 타입에서 큰 타입으로 형 변환은 생략 가능
-        
+
 
         //명시적 형변환
         char chs=(char)1000;

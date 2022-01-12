@@ -3,7 +3,7 @@ package java_study;
 
 import java.util.Scanner;
 
-public class chapter1_variable {
+public class chapter2_variable {
     public static void main(String[] args) {
 
         boolean b=true,bb=false;  //1byte

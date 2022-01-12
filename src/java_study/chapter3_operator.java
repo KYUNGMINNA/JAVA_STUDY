@@ -1,6 +1,6 @@
 package java_study;
 
-public class chapter2_operator {
+public class chapter3_operator {
     public static void main(String[] args) {
 
         int a=10,b=3;

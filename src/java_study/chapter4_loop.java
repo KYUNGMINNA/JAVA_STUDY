@@ -5,7 +5,6 @@ public class chapter4_loop {
 
 
         //if문
-
         if(조건식){
 
         }
@@ -15,22 +14,29 @@ public class chapter4_loop {
         else  //else 생략 가능
 
 
-        if(true) System.out.println("블럭 내 한문장일때 사용방법");
+        if(조건식) System.out.println("블럭 내 한문장일때 사용방법");
 
 
 
-//        switch (1){  //switch 문 의 조건식은 정수 or 문자열 이여야 한다.  char 사용가능( 왜냐면 유니코드 형식으로 저장 되어서)
-//            case 1:  //case문의 값은 반드시 상수 여야 한다(변수,실수 ,문자열 안됌 ) --
-//
-//                break;
-//            case 2: case 4: case 5 :
-//                break;
-//            case 3:    //아무것도 없으면 break 안써도 됌 그러나 내용 있으면 무조건 break  // 마지막 문장일 경우 break 생략 가능
-//
-//            default: //  case문에 없으면 default 실행
-//
-//        }
-//
+        switch (조건식){  //조건식은 정수 or 문자(유니코드로 저장됌) or 문자열
+            case 값:  // 값은 정수 or 문자 or 문자열
+
+                break;
+            case 값: case 값: case 값 :
+                break;
+            case 값:    //아무것도 없으면 break 안써도 됌 그러나 내용 있으면 무조건 break  // 마지막 문장일 경우 break 생략 가능
+
+            default: //  원하는 값 없으면  default 실행
+
+        }
+
+        //삼항 연산자
+        int a=3,b=4;
+        int c=1,d=2;
+        System.out.println("삼항 연산자 연산자 참이면 c ,거짓이면 d: (a>b)?c:d "+((a>b)?c:d));
+
+
+
 //        for (int i=1;i<5;i++){
 //
 //        }

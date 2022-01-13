@@ -36,17 +36,13 @@ public class chapter4_loop {
         System.out.println("삼항 연산자 연산자 참이면 c ,거짓이면 d: (a>b)?c:d "+((a>b)?c:d));
 
 
+        //특수 for문
+        for (int i=1,j=2;i<5;i++,--j){
 
-//        for (int i=1;i<5;i++){
-//
-//        }
-//
-//        for (int i=1,j=2;i<5;i++,--j){
-//
-//        }
+        }
 
+        //무한 반복문
         // for (;;);
-        //for (;;) System.out.println("hello");
 
 
         //for (타입 변수명 : 배열 또는 컬렉션)

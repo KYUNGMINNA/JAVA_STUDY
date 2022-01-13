@@ -63,14 +63,16 @@ public class chapter4_loop {
             System.out.println("test123");
         }while (조건식); //조건식은 참 or 거짓
 
+
         //continue 반복문 내에서만 사용 가능
-//        for(int i=1;i<=10;i++){
-//            if (i%3==0){
-//                continue;
-//            }
-//            System.out.println(i);
-//
-//        }
+        for(int i=1;i<=10;i++){
+           if (i%3==0){  //continue 만나면 반복문의 끝으로 이동하여 다음 반복문 수행
+                        //**for문은 증감식으로 이동 ,  while문과 do-while문의 경우 조건식으로 이동**
+               continue;
+         }
+           System.out.println(i);
+
+      }
 
 
         //이름 붙은 반복문

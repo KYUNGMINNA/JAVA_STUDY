@@ -51,17 +51,17 @@ public class chapter4_loop {
             System.out.println(tmp);
         }
 
-
-//        while(true){  //조건식이 참일 동안 반복될 문장을 적는다
-//            System.out.println("test");
-//        }
+        //while문
+        while(조건식){  //조건식은  참 or 거짓
+            System.out.println("test");
+        }
 
 
         //do while은 최소한 한번의 문장은 수행 한다 .
-//        do{
-//              //조건식 연산결과 참일때 수행될 문장들을 적는다
-//            System.out.println("test123");
-//        }while (true);
+        do{
+              //조건식 연산결과 참일때 수행될 문장들을 적는다
+            System.out.println("test123");
+        }while (조건식); //조건식은 참 or 거짓
 
         //continue 반복문 내에서만 사용 가능
 //        for(int i=1;i<=10;i++){

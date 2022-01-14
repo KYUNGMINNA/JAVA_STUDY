@@ -68,9 +68,21 @@ public class chapter5_array {
         //===
         int[] copy3=new int[10];
         System.arraycopy(copy1,0,copy3,0,copy1.length);
-        //copy[0] 에서 copy[3]으로 ,copy.length개의 데이터 복사 
+        //copy[0] 에서 copy[3]으로 ,copy.length개의 데이터 복사
 
+        //String 배열
+        String[] str=new String[3];
+        str[0]="a";  //원래는 str[0]=new String("a"); 이나 생략 가능
+        str[1]="b";
+        str[2]="c";
 
+        String[] str2=new String[]{"a","b","c"};
+        String[] str3={"a","b","c"};
+
+        //char배열 -> String클래스
+        char[] chararr={'a','b','c'};
+        String strch=new String(chararr); // char배열 을 string으로
+        char[] temp=strch.toCharArray();  //string을 char배열로 
 
 
     }

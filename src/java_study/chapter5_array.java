@@ -89,5 +89,28 @@ public class chapter5_array {
         char[] temp=strch.toCharArray();  //string을 char배열로
         System.out.println(temp);
 
+
+        //2차원 배열  선언
+        int[][] multimatrix=new int[3][3];
+
+        //2차원 배열 초기화
+        int[][] multimatrix2=new int[][]{{1,2,3,},{5,6,7}};
+        int[][] multimatrix3={{1,2,3,},{5,6,7}};
+
+        for(int i=0;i<multimatrix2.length;i++){
+            for(int j=0;j<multimatrix2[i].length;j++){
+                multimatrix2[i][j]=10;
+            }
+        }
+
+        //가변 배열
+        int[][] fake=new int[5][];
+        fake[0]=new int[4];  //1행 - 값 4개
+        fake[1]=new int[3];  //2행 값 3개
+        fake[2]=new int[2]; //3행 값 2개
+        fake[3]=new int[1]; //4행 값 1개
+
+
+
     }
 }

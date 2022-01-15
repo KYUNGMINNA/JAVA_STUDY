@@ -81,9 +81,13 @@ public class chapter5_array {
 
         //char배열 -> String클래스
         char[] chararr={'a','b','c'};
-        String strch=new String(chararr); // char배열 을 string으로
-        char[] temp=strch.toCharArray();  //string을 char배열로 
 
+        System.out.println("char ->String");
+        String strch=new String(chararr); // char배열 을 string으로
+
+
+        char[] temp=strch.toCharArray();  //string을 char배열로
+        System.out.println(temp);
 
     }
 }

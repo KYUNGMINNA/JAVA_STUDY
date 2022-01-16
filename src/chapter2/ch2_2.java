@@ -11,6 +11,6 @@ public class ch2_2 {
         tmp=x;
         x=y;
         y=tmp;
-        System.out.println("x :"+x+" y:"+y);
+        System.out.println("x :"+x+" y:"+y+"tmp:"+tmp);
     }
 }

@@ -44,6 +44,10 @@ class variable_method {
         System.out.println("반환값 없는 메서드 호출");
     }
 
+    //클래스 메서드
+    static void classmethod(){
+        System.out.println("클래스 메서드 호출");
+    }
 
 }
 public class chapter6_oop {
@@ -88,12 +92,16 @@ public class chapter6_oop {
         System.out.println(var2.kind+"  "+var2.number+"  "+var2.width+" "+var2.height);
 
 
-        //메서도 호출 ( 객체 생성 과정 필요)
+        //인스턴스 메서도 호출 ( 객체 생성 과정 필요)
         variable_method methodcall=new variable_method();
         //반환 값 있는 메서드 호출
         int result=methodcall.add(1,2);
         //반환값 없는 메서도 호출
         methodcall.print(1);
+
+        //클래스메서드호출(객체생성필요없음)
+        variable_method.classmethod();
+
 
     }
 

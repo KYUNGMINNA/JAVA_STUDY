@@ -3,11 +3,16 @@ package chapter2;
 public class ch2_4 {
     public static void main(String[] args) {
         byte b=1;
+
         short s=2;
+
         char c='A';
+
         int finger=10;
+
         long big=100_000_000_000L;
         long hex=0XFFFF_FFFF_FFFF_FFFFL;
+
         int octnum=010;
         int hexnum=0x10;
         int binnum=0b10;

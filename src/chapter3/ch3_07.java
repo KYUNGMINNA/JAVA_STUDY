@@ -1,6 +1,6 @@
 package chapter3;
 
-public class ch3_7 {
+public class ch3_07 {
     public static void main(String[] args) {
         byte a=10;
         byte b=30;

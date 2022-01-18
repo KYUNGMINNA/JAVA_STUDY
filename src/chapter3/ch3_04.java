@@ -1,13 +1,13 @@
 package chapter3;
 
-public class ch3_1 {
+public class ch3_04 {
     public static void main(String[] args) {
-        int i=5;
-        i++;
+        int i=-10;
+        i=+i;
         System.out.println(i);
 
-        i=5;
-        ++i;
+        i=-10;
+        i=-i;
         System.out.println(i);
     }
 }

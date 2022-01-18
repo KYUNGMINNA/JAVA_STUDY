@@ -1,6 +1,6 @@
 package chapter3;
 
-public class ch3_3 {
+public class ch3_03 {
     public static void main(String[] args) {
 
         int i=5,j=5;

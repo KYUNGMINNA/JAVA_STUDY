@@ -1,6 +1,6 @@
 package chapter2;
 
-public class ch2_8 {
+public class ch2_08 {
 
     public static void main(String[] args) {
         System.out.println("\'");

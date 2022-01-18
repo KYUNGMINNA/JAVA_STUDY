@@ -1,6 +1,6 @@
 package chapter2;
 
-public class ch2_9 {
+public class ch2_09 {
     public static void main(String[] args) {
         short smin=-32768;
         short smax=32767;

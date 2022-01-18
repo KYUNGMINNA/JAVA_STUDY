@@ -1,7 +1,7 @@
 package chapter2;
 
 import java.util.*;
-public class ch2_6 {
+public class ch2_06 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("두자리 정수를 입력해 주세요:");

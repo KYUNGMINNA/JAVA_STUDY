@@ -1,6 +1,6 @@
 package chapter2;
 
-public class ch2_7 {
+public class ch2_07 {
     public static void main(String[] args) {
         char cha='A';
         int chatoint=(int)cha;

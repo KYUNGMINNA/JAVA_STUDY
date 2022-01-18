@@ -1,6 +1,6 @@
 package chapter2;
 
-public class ch2_1 {
+public class ch2_01 {
     public static void main(String[] args) {
         int year=0;
         int age=14;

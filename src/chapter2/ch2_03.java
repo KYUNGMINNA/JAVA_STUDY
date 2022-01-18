@@ -1,6 +1,6 @@
 package chapter2;
 
-public class ch2_3 {
+public class ch2_03 {
     public static void main(String[] args) {
         String name="Ja"+"va";
         String str=name+8.0;

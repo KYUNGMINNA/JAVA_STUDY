@@ -1,5 +1,7 @@
 package chapter5;
+
 import java.util.*;
+
 public class ch5_21 {
     public static void main(String[] args) {
         final int SIZE = 5;

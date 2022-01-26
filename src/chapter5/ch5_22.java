@@ -32,5 +32,5 @@ public class ch5_22 {
             }
             System.out.println();
         }
-    } // main의 끝
+    }
 }

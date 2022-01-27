@@ -10,7 +10,7 @@ class  TV{
     void channelUp(){++channel;}
     void channelDown(){--channel;}
 }
-public class ch6_1 {
+public class ch6_01 {
     public static void main(String[] args) {
         TV t;
         t=new TV();

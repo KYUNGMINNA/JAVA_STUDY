@@ -9,7 +9,7 @@ class MyMath{
     double divide(double a,double b){return a/b;}
 
 }
-public class ch6_6{
+public class ch6_06{
     public static void main(String[] args) {
 
         MyMath mymath=new MyMath();

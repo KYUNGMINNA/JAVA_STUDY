@@ -1,6 +1,6 @@
 package chapter6;
 
-public class ch6_7 {
+public class ch6_07 {
     public static void main(String[] args) {
         firstmethod();
     }

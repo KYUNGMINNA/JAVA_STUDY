@@ -2,7 +2,7 @@ package chapter6;
 
 class Data{int x;}
 
-public class ch6_9{
+public class ch6_09{
     public static void main(String[] args) {
         Data d=new Data();
         d.x=10;

@@ -10,7 +10,7 @@ class Tv4{
     void channelDown(){--channel;}
 
 }
-public class ch6_4 {
+public class ch6_04 {
     public static void main(String[] args) {
         Tv4[] tv4arr=new Tv4[3];
 

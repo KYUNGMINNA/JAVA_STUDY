@@ -7,7 +7,7 @@ class Card{
     static int width;
     static int height;
 }
-public class ch6_5{
+public class ch6_05{
     public static void main(String[] args) {
 
         System.out.println("공통 속성(클래스 변수)인 카드의 가로의 길이는"+Card.width);

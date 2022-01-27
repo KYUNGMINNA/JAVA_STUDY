@@ -1,6 +1,6 @@
 package chapter6;
 
-public class ch6_8 {
+public class ch6_08 {
     public static void main(String[] args) {
         System.out.println("main[String[] args]가 시작 되었음");
         firstmethod();

@@ -1,6 +1,7 @@
 package chapter9;
 
 import java.util.*;
+
 public class ch9_42 {
     public static void main(String[] args) {
         String data="100,,,200,300";

@@ -1,5 +1,7 @@
 package chapter9;
+
 import java.util.*;
+
 public class ch9_40 {
     public static void main(String[] args) {
         String source="1,김천재,100,100,100|2,박수재,95,80,90|3,이지바,80,90,90";

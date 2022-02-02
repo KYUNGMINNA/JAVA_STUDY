@@ -1,5 +1,5 @@
 
-package chapter5;
+package chapter05;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 import java.util.*;
 public class ch5_20 {
     public static void main(String[] args) {

@@ -1,6 +1,4 @@
-package chapter5;
-
-import java.util.Scanner;
+package chapter05;
 
 public class ch5_19 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package chapter6;
+package chapter06;
 
 class Data2{int x;}
 

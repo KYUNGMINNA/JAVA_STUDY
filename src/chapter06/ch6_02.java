@@ -1,4 +1,4 @@
-package chapter6;
+package chapter06;
 
 class TV2{
     String color;

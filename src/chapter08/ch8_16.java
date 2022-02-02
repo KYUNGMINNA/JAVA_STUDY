@@ -1,4 +1,4 @@
-package chapter8;
+package chapter08;
 
 import java.io.*;
 public class ch8_16 {

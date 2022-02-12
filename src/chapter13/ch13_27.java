@@ -19,7 +19,7 @@ public class ch13_27 {
         System.out.println();
 
         result = 0L;
-        start = System.currentTimeMillis(); 
+        start = System.currentTimeMillis();
         for(long i=from;i<=to;i++)
             result += i;
 

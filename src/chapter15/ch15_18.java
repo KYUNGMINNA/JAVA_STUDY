@@ -41,7 +41,7 @@ class InputThread extends Thread {
         try {
             input.connect(output);
         } catch(IOException e) {}
-    } // connect
+    }
 }
 
 class OutputThread extends Thread {
@@ -68,5 +68,5 @@ class OutputThread extends Thread {
         try {
             output.connect(input);
         } catch(IOException e) {}
-    } 
+    }
 }

@@ -5,7 +5,7 @@ import java.io.*;
 public class ch15_16 {
     public static void main(String args[]) {
         try {
-            String fileName = "test.txt";
+            String fileName = "s.txt";
             FileInputStream fis = new FileInputStream(fileName);
             FileReader	    fr  = new FileReader(fileName);
 

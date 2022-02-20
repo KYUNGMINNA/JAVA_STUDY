@@ -1,4 +1,4 @@
-package chapter02;
+package java.chapter02;
 
 import java.util.*;
 public class ch2_06 {

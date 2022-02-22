@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 public class Array_ArrayList {
     public static void main(String[] args) {
-        ArrayList array=new ArrayList(500);
-        ArrayList array2=new ArrayList();
-        
+        ArrayList array=new ArrayList();
 
         array.add(1);
         array.add(3);

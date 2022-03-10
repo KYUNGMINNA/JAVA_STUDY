@@ -5,16 +5,16 @@ import java.io.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-public class ch16_09 implements Runnable {
+public class ch16_10 implements Runnable {
     ServerSocket serverSocket;
     Thread[] threadArr;
 
     public static void main(String args[]) {
-        ch16_09 server = new ch16_09(5);
+        ch16_10 server = new ch16_10(5);
         server.start();
-    } // main
+    }
 
-    public ch16_09(int num) {
+    public ch16_10(int num) {
         try {
             serverSocket = new ServerSocket(7777);
             System.out.println(getTime()+"서버가 준비되었습니다.");

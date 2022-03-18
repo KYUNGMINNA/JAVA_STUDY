@@ -49,6 +49,7 @@ class test{
 }//-03.18
 
 
+//03.19
 class methodtest{
   
    public int plus_method(int a,int b){
@@ -67,3 +68,4 @@ class methodtest{
   }
 
 }
+//-03.19

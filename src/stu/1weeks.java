@@ -1,5 +1,7 @@
 public class 1weeks{ 
   public static void main(String[] args){
+    
+    // 03.18-
     int a;
     int[] b;
     
@@ -23,37 +25,45 @@ public class 1weeks{
     
     te[0].aa=1;
     te[1].aa=2;
+    //-03.18
     
     
-    int[] arrays=new int[3];
+    //03.19
     methodtest me=new methodtest();
     
-    me.methodtestcall(1,2);
-    me.stringmethodtest("집에 가고싶다");
-    me.floatmethodtest("1.23f");
-    me.arraymethodtest(arrays);
+    me.plus_method(1,2);
+    
+    me.stringemthod("집에 가고싶다");
+    
+    me.float_method("1.23f");
+    
+    
+    me.void_method();
+    //-03.19
   }
   
 }
+//03.18
 class test{ 
   int aa;
-}
+}//-03.18
+
+
 class methodtest{
-   public int methodtestcall(int a,int b){
+  
+   public int plus_method(int a,int b){
      return a+b;
-   
    }
-  public String stringemthodtest(String str){
+  
+  public String string_method(String str){
     return str; 
   }
-  public float floatmethodtest(float flo){
+  public float float_method(float flo){
     return flo;
   
   }
-  public int[] arraymethodtest(int[] arrs){
-    return arrs;
-    
-  
+  public void void_method() {
+    System.out.println("return void method ");
   }
 
 }

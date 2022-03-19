@@ -66,6 +66,15 @@ class methodtest{
   public void void_method() {
     System.out.println("return void method ");
   }
+  methodtest tes(){
+    return new methodtest();
+  }
+  methodtest2 tes2(){
+    
+    return new methodtest2();
+  }
+}
+class methodtest2{
 
 }
 //-03.19

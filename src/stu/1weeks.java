@@ -33,7 +33,7 @@ public class 1weeks{
     
     me.plus_method(1,2);
     
-    me.stringemthod("집에 가고싶다");
+    me.stringemthod("String message");
     
     me.float_method("1.23f");
     

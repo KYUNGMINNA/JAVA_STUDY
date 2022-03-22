@@ -16,10 +16,11 @@ class Main{
     System.out.println(car.oil);
     //--0321
     
+    //0322--
     output outs=new output();
     System.out.println(outs);
     System.out.println(outs.sub_output=new output());
-    
+    //-0322
     
     
   }
@@ -40,7 +41,7 @@ class Secondcar{
       }
   }
   
-  //0322
+  //0322--
   class output{
     output sub_output;
     
@@ -54,4 +55,4 @@ class Secondcar{
     }
     
     
-  }
+  }//--0322

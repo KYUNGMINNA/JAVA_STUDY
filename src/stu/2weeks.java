@@ -10,9 +10,18 @@ class Car{
 }
 class Main{
   public static void main(String[] args){
+    //--0321
     Car car=new Car();
     System.out.println(car.fill_oil(300));
     System.out.println(car.oil);
+    //--0321
+    
+    output outs=new output();
+    System.out.println(outs);
+    System.out.println(outs.sub_output=new output());
+    
+    
+    
   }
   
   
@@ -28,7 +37,21 @@ class Secondcar{
     arraycar[1]=new Car();
     arraycar[2]=new Car();
     arraycar[3]=new Car();
+      }
+  }
+  
+  //0322
+  class output{
+    output sub_output;
+    
+    output returnoutput(){
+      return new output();
+    }
+    
+    output returnoutput2(){
+     sub_output=new output();
+      return sub_output;
+    }
+    
     
   }
- 
- }

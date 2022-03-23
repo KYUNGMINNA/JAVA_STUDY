@@ -56,3 +56,33 @@ class Secondcar{
     
     
   }//--0322
+  
+  
+  //0323--
+  /*
+  show database newdatabasename;
+  
+  show newdatabasename;
+  
+  use newdatabasename;
+  
+  
+  ----
+  CREATE TABLE tablename {
+       number INT
+       topic VARCHAR(20)
+  };
+  
+  INSERT INTO tablename(number.topic) values(123,'topcis is ');
+  
+  SELECT * from tablename;
+  
+  SLECT number from tablename ;
+  
+  SELECT number form tablename where number=123;
+  
+  
+  
+  
+  */
+  //--0323

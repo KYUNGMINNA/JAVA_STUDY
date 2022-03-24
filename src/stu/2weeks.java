@@ -86,3 +86,18 @@ class Secondcar{
   
   */
   //--0323
+  
+  /*0324--
+ 
+  ArrayList<String> array =new ArrayList<String>();
+  
+  boolean - array.add(Obejct obj);
+  Object- array.get(int index);
+  Object -array.remove(int index);
+  int -array.size();
+  
+  void -array.add(int index,Obejct obj);
+  boolean -array.remove(Object obj);
+  
+  
+  */--0324

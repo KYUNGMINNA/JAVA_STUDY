@@ -101,3 +101,19 @@ class Secondcar{
   
   
   --0324*/
+  
+  /* 0325--
+  
+  @Controller 
+  
+  @RequestMapping("/hello")
+  
+  @GetMapping("/get")
+  
+  @PostMapping("/post")
+  
+  ModelAndView modelandview=new ModelAndView();
+  modelandview.setVieName("view");
+  return modelandview;
+  
+  --0325*/ 

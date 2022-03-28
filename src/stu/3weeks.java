@@ -14,5 +14,7 @@ mv.addObejct("name" , Obejct);
 
 return mv;
 
-
+@GetMapping("/mapping")
+public String test(@ReuqestParam("ttttt") int detail){ 
+}
 //--0328

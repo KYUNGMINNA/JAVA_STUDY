@@ -1,4 +1,6 @@
-public class 1weeks{ 
+package stu.java0315;
+
+public class java{
   public static void main(String[] args){
     
     // 03.18-
@@ -14,14 +16,14 @@ public class 1weeks{
     
     
     
-    t=new t();
+    t=new test();
     t.aa=1234567;
     
     
     te=new test[2];
    
-    te[0]=new t();
-    te[1]=new t();
+    te[0]=new test();
+    te[1]=new test();
     
     te[0].aa=1;
     te[1].aa=2;
@@ -33,9 +35,9 @@ public class 1weeks{
     
     me.plus_method(1,2);
     
-    me.stringemthod("String message");
+    me.string_method("String message");
     
-    me.float_method("1.23f");
+    me.float_method(1.23f);
     
     
     me.void_method();
@@ -43,6 +45,7 @@ public class 1weeks{
   }
   
 }
+
 //03.18
 class test{ 
   int aa;

@@ -1,29 +1,33 @@
+package stu.java0321;
+
 //0321--
 class Car{
   int oil=0;
-  void fill_oil(int oil){
+  boolean fill_oil(int oil){
   this.oil=oil;
+    return false;
   }
   
   
   
 }
-class Main{
-  public static void main(String[] args){
+class Main {
+  public static void main(String[] args) {
     //--0321
-    Car car=new Car();
+    Car car = new Car();
     System.out.println(car.fill_oil(300));
     System.out.println(car.oil);
     //--0321
-    
+
     //0322--
-    output outs=new output();
+    output outs = new output();
     System.out.println(outs);
-    System.out.println(outs.sub_output=new output());
+    System.out.println(outs.sub_output = new output());
     //-0322
-    
-    
+
+
   }
+}
   
   
   

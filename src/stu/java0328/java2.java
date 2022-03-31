@@ -14,7 +14,7 @@ public class java2{
   
 }
 
-pacakage java0401;
+package java0401;
 public class B{
   int b_a;
   

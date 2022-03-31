@@ -34,3 +34,37 @@ public class B{
   public B() { } 
   public B(int c) { } 
 }
+-------------------------
+
+class C {
+public int c1;
+public void c_method() { } 
+} 
+
+Class D  extends C {
+  public int d1;
+  public void d_method() { }}
+
+}
+
+public class Main{ 
+  public static vod main(String[] args){
+   D d =new D( );
+   
+   d.c1=123;     -- OK
+   d.c_method(); -- OK
+     
+   d.d1=456;     -- OK
+   d.d_method(); -- OK
+  
+  }
+}
+
+-------
+class f { 
+   public void f_method( ) { }  
+ }
+
+inerface g{
+  public void g_method( ) ;
+}

@@ -1,3 +1,4 @@
+//0401--
 interface A{
 
   public void A_method();
@@ -50,3 +51,6 @@ class D{
     //return new B;
   }
 }
+
+
+//--0401

@@ -69,10 +69,33 @@ public class java2 {
             e.printStackTrace();
         }
 
-    }}
+
+
+        custom_class cc=new custom_class();
+        try {
+            cc.test();
+
+        }catch (custom_exception ce){
+            ce.printStackTrace();
+        }
+
+    }
+}
 
 class trycatch {
     public void exce() throws Exception{
         throw new Exception();
+    }
+}
+
+class custom_exception extends Exception{
+    custom_exception(String message){
+        super(message);
+    }
+}
+class custom_class {
+    public void test() throws custom_exception{
+        new custom_exception("custom excpetion !");
+
     }
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .b{
+            color: aqua;
+        }
+        #a{
+            color:blueviolet;
+        }
+
+        div>span>ol>.li1{
+            color: green;
+
+        }
+        div span {
+            color:blue
+        }
+    </style>
+
+</head>
+<body>
+
+    <form action="" >
+        
+        아이디:<input type="email" name="email_name" value="" required><br>
+        비밀번호:<input type="password" name="pwd_name"><br>
+     
+        <input id='a' type="submit" value="input_submit_버튼_submit_O">  <!---submit 기능 O-->
+        <input class="b" type="button" value="input_button_버튼2_submit_X"> <!---submit 기능 X--->
+        
+        <button class="b" type="submit">button_submit버튼3_submit_O</button><!---submit 기능 O-->
+        <br>
+        <input type="radio" name="gender" value="male">남
+        <input type="radio" name="gender" value="female">여<br>
+   
+        
+
+    </form>
+
+    <div>
+        <span>ssssss
+            <ol class="ol-color">
+                <li>
+                    <li class="li1">123</li>
+                    <li>456</li>
+                    <li>789</li>
+                </li>
+            </ol>
+            <span>zzzzzzzz
+                <li class="span-color"></li>
+            </span>
+        </span>
+    </div>
+</body>
+</html>

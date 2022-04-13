@@ -1,53 +1,55 @@
+package stu.java0328;
+
+
 //0401--
-interface A{
+interface AA{
 
   public void A_method();
 }
-class B implements A{
-  
+class B implements AA {
+
   @Override
   public void A_method(){
- 
+
     System.out.println("Class B implements A");
   }
 }
-class C implements A{
+class CC implements AA{
   @Override
   public void A_method() {
-    
+
     System.out.println("Class C implements A");
   }
 }
-class D{
+class DD{
   public static void main(String[] args){
-    
+
     B b=new B();
     b.A_method();
-    
-    C c=new C();
+
+    CC c=new CC();
     c.A_method();
-    
-    A a=new B();
+
+    AA a=new B();
     a.A_method();
-    
+
     ///////////////////////////
-    
-    A aa;
-   
+
+    AA aa;
+
     aa=b;
     aa.A_method();
-    
+
     aa=c;
     aa.A_method();
-  
-  //////////  ::static A new_met( ) { } 
-    A aaa;
-    aaa=new_met();
-    aaa.a_method();
+
+  //////////  ::static A new_met( ) { }
+
+      DD.new_met();
   }
-  static A new_met()
+  static B new_met()
   {
-    return new B;
+    return new B();
     //return new B;
   }
 }

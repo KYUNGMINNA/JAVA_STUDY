@@ -10,7 +10,36 @@
 
     <style>
 
+     .gr{
+            width: 200px;
+            height: 100px;
+            padding: 100px;
+            border: 2px solid yellow;
+            position:relative;
 
+        }
+        .pa{
+            width: 100px;
+            height: 50px;
+            border: 2px solid gray;
+            position:relative;
+        }
+        .ch{
+            width: 80px;
+            height: 40px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 10px;
+            font-size: 30px;
+
+        }
+        .absolute{
+       
+            position: absolute;
+            right:100px;
+            bottom: 150px;
+
+        }
 
 
     </style>
@@ -20,7 +49,13 @@
     
 
 
-
+<div class="gr">
+    <div class="pa">
+        <div class="ch">1</div>
+        <div class="ch absolute">2</div>
+        <div class="ch">3</div>
+    </div>
+</div>
 
     
 </body>

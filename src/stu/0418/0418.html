@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: red;
+            transition: 1s cubic-bezier(0.36,0,0.66,-0.56);
+        }
+        
+        .box:hover{
+            width: 300px;
+            background: skyblue;
+        }
+<!--  ------------------------------------------------------------------------------- -->
+    div[class^=2box]{ 
+            width: 200px;
+            height: 200px;
+            background: orange;
+            margin: 50px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            transition: 2s;
+
+
+        }
+        .2box1:hover{
+            transform: rotate(-720deg);
+        }
+        .2box2:hover{
+            transform: translate(100px,50px);  /* translate(x축 ,y축)으로 이동*/
+        }
+        .2box3:hover{
+            transform: scale(0.7,1.5);  /* 기존의 값에 몇 배 인지*/
+        }
+        .2box4:hover{
+            transform: skew(0,20deg);  /* skew(x축의 각도,y축의 각도)으로 기울다*/
+        }
+        .2box5:hover{
+            /*다중 적용*/
+            transform: translate(30px,-20px) skew(-20deg) scale(0.7);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="box"></div>
+<!--  ------------------------------------------------------------------------------- -->
+    <div class="2box1">1</div>
+    <div class="2box2">2</div>
+    <div class="2box3">3</div>
+    <div class="2box4">4</div>
+    <div class="2box5">5</div>
+
+
+
+    
+</body>
+</html>

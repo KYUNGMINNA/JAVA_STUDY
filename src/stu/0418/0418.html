@@ -23,7 +23,7 @@
             background: skyblue;
         }
 <!--  ------------------------------------------------------------------------------- -->
-    div[class^=2box]{ 
+    div[class^=box_tf_]{ 
             width: 200px;
             height: 200px;
             background: orange;
@@ -39,18 +39,40 @@
             transform: rotate(-720deg);
         }
         .2box2:hover{
-            transform: translate(100px,50px);  /* translate(x축 ,y축)으로 이동*/
+            transform: translate(100px,50px);  
         }
         .2box3:hover{
-            transform: scale(0.7,1.5);  /* 기존의 값에 몇 배 인지*/
+            transform: scale(0.7,1.5);  
         }
         .2box4:hover{
-            transform: skew(0,20deg);  /* skew(x축의 각도,y축의 각도)으로 기울다*/
+            transform: skew(0,20deg); 
         }
         .2box5:hover{
             /*다중 적용*/
             transform: translate(30px,-20px) skew(-20deg) scale(0.7);
         }
+<!--  ------------------------------------------------------------------------------- -->
+        .box_ani{
+            width:100px;
+            height:100px;
+            background:yellow;
+        }
+        .box_ani:hover{
+            animation:up 1s 1s both;
+        }
+        @keyframes up{
+            0%{
+                width:200px; 
+                transform:translate(100px,100px)
+            }
+            100%{
+                width:800px;
+                transform:translate(0,0);
+            }
+        
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -58,14 +80,14 @@
     
     <div class="box"></div>
 <!--  ------------------------------------------------------------------------------- -->
-    <div class="2box1">1</div>
-    <div class="2box2">2</div>
-    <div class="2box3">3</div>
-    <div class="2box4">4</div>
-    <div class="2box5">5</div>
+    <div class="box_tf_1">1</div>
+    <div class="box_tf_2">2</div>
+    <div class="box_tf_3">3</div>
+    <div class="box_tf_4">4</div>
+    <div class="box_tf_5">5</div>
 
-
-
+<!--  ------------------------------------------------------------------------------- -->
+    <div class="box_ani"><div>
     
 </body>
 </html>

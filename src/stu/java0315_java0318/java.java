@@ -1,4 +1,4 @@
-package stu.java0315;
+package stu.java0315_java0318;
 
 public class java{
   public static void main(String[] args){

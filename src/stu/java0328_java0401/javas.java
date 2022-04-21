@@ -1,6 +1,6 @@
-package stu.java0328;
+package stu.java0328_java0401;
 
-import stu.java0328.java0401.B;
+import stu.java0328_java0401.java0401.B;
 
 public class javas {
     public static void main(String[] args) {

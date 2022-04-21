@@ -1,4 +1,4 @@
-package stu.java0404;
+package stu.java0404_java0408;
 
 
 class A{

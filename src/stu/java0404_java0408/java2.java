@@ -1,6 +1,4 @@
-package stu.java0404;
-
-import stu.java0328.java0401.B;
+package stu.java0404_java0408;
 
 class java2_A{
 

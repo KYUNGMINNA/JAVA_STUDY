@@ -1,4 +1,4 @@
-package stu.java0328.java0401;
+package stu.java0328_java0401.java0401;
 
 public class B {
     public  int b_a;

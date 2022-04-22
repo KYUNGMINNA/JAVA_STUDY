@@ -26,7 +26,8 @@ HAVING AVG(salary)>=2000 ;
 SELECT 
     department_id,
     SUM(salary+(salary*commission_pct)),
-    TRUNC(AVG(salary+(salary*commission_pct)),2)
+    TRUNC(AVG(salary+(salary*commission_pct)),2),
+    COUNT(salary+(salary*commission_pct))
 FROM employees
 WHERE commission_pct IS NOT NULL
 GROUP BY department_id;

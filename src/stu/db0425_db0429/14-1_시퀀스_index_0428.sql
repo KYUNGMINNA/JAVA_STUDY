@@ -4,6 +4,7 @@
 SELECT * FROM user_sequences;
 
 --시퀀스 생성  '테이블이름_seq' 로 짓는게 관례  | 괄호 사용 안함
+
 CREATE SEQUENCE dept2_seq
     START WITH 1 --시작 값  |작성안할시 (기본값은 증가할 때는 최소값,감소할 때는 최대값)
     INCREMENT BY 1 --증가 값 | (양수면 증가,음수면 감소  , --작성안할시 기본값1)
@@ -19,6 +20,7 @@ CREATE TABLE dept3(
     loca VARCHAR2(13),
     dept_date DATE
 ); 
+
 
 RENAME dept2_seq TO dept3_seq;
 
@@ -67,6 +69,7 @@ SELECT * FROM employees WHERE first_name='Nancy';
 CREATE INDEX emp_first_name_idx ON employees(first_name);
 
 DROP INDEX emp_first_name_idx;
+
 /*
 - 인덱스가 권장되는 경우 
 1. 컬럼이 WHERE 또는 조인조건에서 자주 사용되는 경우

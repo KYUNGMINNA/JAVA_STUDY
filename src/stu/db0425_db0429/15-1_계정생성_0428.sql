@@ -1,4 +1,3 @@
-
 --사용자 계정 확인
 SELECT* FROM all_users;
 
@@ -8,7 +7,7 @@ CREATE USER user1 IDENTIFIED BY user1;
 
 --DCL : GRANT(권한 부여),REVOKE(권한 회수)
 
-/*
+/* 세세한 권한 
 CREATE USER -> 데이터베이스 유저 생성 권한
 CREATE SESSION ->데이터베이스 접속 권한 
 CREATE TABLE ->테이블 생성 권한
@@ -50,7 +49,7 @@ REVOKE CONNECT,RESOURCE FROM user1;
 
 
 --사용자 계정 삭제 
---DROP USER [유저 이름] CASCADE;
+--DROP USER [유저 이름] CASCADE; -- 테이블+시퀀스+객체 모두 삭제 
 --CASCADE 없을 시 --> 테이블 시퀀스 존재한다면(즉 데이터있으면) 계정 삭제 안됨.
 DROP USER user1 CASCADE;
 
@@ -65,7 +64,13 @@ DROP USER user1 CASCADE;
 
 SELECT * FROM dba_tablespaces;
 
---USERS 테이블 스페이스를 기본 사용 공간으로 지정 
-ALTER USER user1 DEFAULT TABLESPACE users
+--USERS라는 테이블 스페이스를 기본 사용 공간으로 지정 
+ALTER USER user1 DEFAULT TABLESPACE USER_TABLESPACE
 QUOTA UNLIMITED ON users;
+
+--테이블 스페이스 내의 객체를 전체 삭제. ::물리적인 파일은 남아 있다.
+DROP TABLESPACE USER_TABLESPACE INCLUDING CONTENTS ;
+
+---물리적 파일까지 한번에 삭제하는법
+DROP TABLESPACE USER_TABLESPACE INCLUDING CONTENTS AND DATAFILES ;
 

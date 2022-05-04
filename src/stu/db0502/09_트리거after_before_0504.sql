@@ -89,7 +89,7 @@ CREATE TABLE order_history(
     history_no NUMBER(5) PRIMARY KEY,
     order_no NUMBER(5),
     product_no NUMBER(5),
-    total NUMBEr(10),
+    total NUMBER(10),
     price NUMBER(10)
 );
 
@@ -134,8 +134,10 @@ BEGIN
 END;
 
 
+                               --history_no , order_no ,product_no ,total , price
 INSERT INTO order_history VALUES(order_history_seq.NEXTVAL,200,1,5,50000);
 INSERT INTO order_history VALUES(order_history_seq.NEXTVAL,200,2,1,15000);
 INSERT INTO order_history VALUES(order_history_seq.NEXTVAL,200,3,10,50000);
 
 SELECT* FROM product;
+SELECT * FROM order_history;

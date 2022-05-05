@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- action : 전송할 정보를 처리할 페이지의 URL 작성 :: 지금은 없어서 #으로-->
+
+                <!--method는 전송 방식 선택 
+                form의 default는 get 방식
+                post는 주소가 아닌 요청 헤더 파일에 숨겨서 보냄
+                 -->
+                            <!-- autocomplete="off"는 자동완성 끊음 
+                                :기본은 on -->
+<form action="#" method="get" autocomplete="off">
+    아이디: <input type="text" name="id" value="tttt"><br>
+    비밀번호:<input type="password" name="pwd" required><br>
+    <!-- input 태그안에 required 속성 쓰면 필수로 작성해야 함 전송 가능-->
+
+
+    #성별<br> <!-- radio는 name을 같게 해야 
+              같은 그룹의 버튼이라 인식해서(택1만 가능)-->
+              
+              <!-- 버튼 클릭시
+                value를 작성해야 구분이 가능해짐 name만 작성하면 on으로만나옴
+                -->
+    <input type="radio" name="gender" value="male">남
+    <input type="radio" name="gender" value="female">여<br>
+
+    #취미 <br><!--value를 작성해야 구분이 가능해짐 name만 작성하면
+                 on으로만나옴-->
+    
+    <input type="checkbox" name="hobby" value="read">독서
+    <input type="checkbox" name="hobby" value="sleep">수면
+    <input type="checkbox" name="hobby" value="soccer">축구
+    <input type="checkbox" name="hobby" value="game">게임<br>
+
+    #자기소개 <br>  
+    <textarea name="introduce" cols="30" rows="10"></textarea><br>
+    
+    <!--type="email"은  @없으면  버튼 전송시 오류 -->
+    <input type="email" name="mail" placeholder="이메일을 입력하세요."><br>
+
+    <input type="file" name="upload"><br>
+
+    <!--숫자 형태만 입력 가능 :숫자 입력안하면 버튼 전송시 오류 -->
+    <input type="number" name="age" min="1" max="200" value="" placeholder="나이를 입력하세요"><br>
+
+    <!--범위를 지정해 줄 수 있는 그래프  :: value는 초기값 설정-->
+    <input type="range" min="0" max="10" step="1" value="3">
+
+    <input type="submit" value="전송"><br>
+    <button type="submit">전송2</button>
+
+
+</form>
+
+
+
+
+
+</body>
+</html>

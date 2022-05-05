@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <style>
+        table{
+            /* 하나의 테두리로 완성  */
+            border-collapse: collapse;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS는 따로 sytle 로 작성하는게 바람직하다 -->
+    <!-- table 태그는 표를 작성하는 태그-->
+    <table border="1">  <!--표를 작성할 때 행(:: tr),렬( :: td)의
+                 크기를 먼저 파악해야함-->
+
+
+            <tr>
+                <!--th는 기본적으로 가운데 정렬 + 굵은 글씨 표시-->
+                <th>이름</th>
+                <th>나이</th>
+                <th>성별</th>
+                <th>주소</th>
+                <th rowspan="4" align="center">
+                    <button>세로버튼</button>
+                </th>
+            </tr>
+   
+
+        <!--tr*2>td*4-->
+     
+            <tr><!-- table의 자식태그 tr은 표의 행을 나타냄-->
+                <td>김철수</td><!-- tr의 자식태그는 td는 한 행에 들어갈 열(칸)을 나타냄-->
+                <td>30</td>
+                <td>남자</td>
+                <td>서울특별시</td>
+            </tr>
+            <tr>
+                <td>박영희</td>
+                <td>25</td>
+                <td>여자</td>
+                <td>경기도 남양주시</td>
+            </tr>
+            <tr>    <!-- 가로 셀 병합 :colspan /align="center" :정렬='중앙'--> 
+                 <!--colspan:: 병합하고 싶은 칸의 개수를 기입-->
+                <td colspan="4" align="center">
+                    <button >버튼입니다.</button>
+                </td>
+            </tr>
+       
+
+        
+
+    </table>
+</body>
+</html>

@@ -24,7 +24,7 @@
 	String id=request.getParameter("id");
 	String pw=request.getParameter("pw");
 
-	if(!id.equals("abc1234")){
+/* 	if(!id.equals("abc1234")){
 		response.sendRedirect("res_id_fail_16_0510.jsp");
 	}else if(id.equals("abc1234")){
 		if(pw.equals("aaa1111")){
@@ -34,6 +34,19 @@
 		}
 		
 		
+	}
+	 */
+	 
+	 //강사 version
+	if(id.equals("abc1234")){
+		if(pw.equals("aaa1111")){
+			response.sendRedirect("res_welcome_18_0510.jsp");
+		}else{
+			response.sendRedirect("res_pw_fail_17_0510.jsp");
+		}
+		
+	}else{
+		response.sendRedirect("res_id_fail_16_0510.jsp");
 	}
 
 %>

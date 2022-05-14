@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+     <style>
+     
+/*       * 은 전체 선택자         */
+         *{  
+            color: red;
+         }
+/*          div 안에(내부에) 있는 모든것 
+             ::선택자 사이의 공백은 자손선택자를 의미   */
+         div *{
+            font-style: italic;
+         }
+
+
+
+     </style>
+
+</head>
+<body>
+
+    <h1>안녕안녕~</h1>
+
+
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>오렌지</li>
+            <li>딸기</li>
+        </ul>
+    </div>
+
+    <div>당근</div>
+    <p>토마토</p>
+    <span>오렌지</span>
+
+
+</body>
+</html>

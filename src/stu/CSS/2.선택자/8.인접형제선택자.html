@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+        /*  현재 지목한 요소 바로 뒤에 있는 형제 요소 한개만 지정 
+                :: 망고만 노란색 적용 */
+        .orange + li{      /*  +li 더 붙여도 된다 */
+
+            color: yellow;
+        }
+
+        /*  첫번째것을 제외한 나머지 li 적용:: 두번째 li 나머지 li를 지시함                */
+        li + li{
+            font-size: 24px;
+        }
+
+        
+    </style>
+
+
+</head>
+<body>
+
+    <ul>
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>포도</li>
+
+    </ul>
+    
+
+
+</body>
+</html>

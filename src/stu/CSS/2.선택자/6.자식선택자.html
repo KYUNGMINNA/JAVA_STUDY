@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         /*  ul  공백은 모든 자식을 뜻함 
+        /*   > 는 자식(직속자식인것 :: ul태그의 자식은 사과,오렌지,딸기 : ol은 자손임)
+             (=바로 밑에 있는것) 자식 class가 orange가 없으면 적용안됨  */
+        ul > .orange{
+            color: orange;
+        }
+
+        /* >는 직속자식 선택자로 바로 밑에 없으면 지목 불가능 */
+
+        /* div 직속자식 ul인, 직속자식 li 의 자식에게 적용  */
+        div> ul>li{
+            font-weight: bold;
+
+        }
+     
+        div>ul>li>ol{
+            color: yellow;
+        }
+
+        
+        div > h1{
+            font-size: 100px;
+        }
+  
+
+        
+    </style>
+
+
+</head>
+<body>
+    <h1>안녕안녕~</h1>
+
+
+    <div>
+        <h1>메롱메롱~</h1>
+        <ul>
+            <li>사과
+                <ol>
+                <li>1번째</li>
+                <li>2번째</li>
+                <li>3번째</li>
+                </ol>
+            </li>
+            
+            <li class="orange">오렌지</li>
+            
+            <li>딸기
+                <ol>
+                    <li>1번째</li>
+                    <li>2번째</li>
+                    <li>3번째</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <div>당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span>
+
+    
+
+
+
+</body>
+</html>

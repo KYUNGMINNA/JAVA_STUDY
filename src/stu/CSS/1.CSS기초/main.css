@@ -1,0 +1,10 @@
+/* import는 항상 맨위에 작성 :: */
+  
+        /* side.css에 적용한것이 main.css에 포함되어 전달 됨
+        ::css 파일 끼리 import 하는 방법 */
+@import "./side.css";
+
+h1,p{
+    color: red;
+    background: orange;
+}

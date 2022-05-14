@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <!--
+       padding은 내부여백으로 경계선과 컨텐츠간의 경계 
+    박스의 크기에 영향을 줄 수 있음     
+    -->
+
+    <style>
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border: 10px solid #000;
+            margin: 30px;
+         /* padding 단축 속성도 있다 
+         지목도 가능top, bottom, left, right ..
+         값 4개, 값3개, 값2개, 값1개 줄때는 margin과 동일하다 */
+            padding: 30px;
+
+                
+            
+            
+
+            /*  default가 content-box | 
+                border box- 컨텐츠의 크기가 줄고 , 박스가 증가      
+                content-box면 컨텐츠크기 고정 ,박스 감소 */
+
+                /*
+                 박스의 크기를 어떤 것을 기준으로 계산할지를 결정
+                border-box는 테두리(경계선)을 기준으로 크기를 정하고,
+                content-box(default)는 내부요소를 기준으로 크기를 정함 
+                padding은 내부 요소와 경계선과의 거리를 벌리는 속성이기 때문에
+                그만큼 박스 크기가 증가 합니다.
+                */
+            box-sizing: border-box;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    
+
+<div class="box">Hello world!</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .fruits>li:nth-child(4){
+            color:orange;
+        }
+
+
+        .fruits>li:nth-child(even){
+            color: blue;
+        }
+        
+        .fruits>li:nth-child(odd){
+            color: red;
+        }
+        /*  n키워드 사용시 0부터 해석(즉,0부터 들어감)  */
+        .fruits>li:nth-child(3n+1){
+            font-style:italic;
+
+        }
+
+
+        
+       /*food에 첫번째 자식은 p가 아여서 문제가 발생
+            .food p:nth-child(1)는 오류 임  ::nth=child 특성임*/
+       /* --> .food의 첫번째 자식이 p가 아니기 때문에 지목해서 스타일을
+             매길 수 없습니다.     
+        .food p:nth-child(1){  ::오류 나는 코드 
+            color: violet;
+        }
+        nth-child 는 자식 요소들이 전부 다 똑같은 태그 와 같이
+        통일되어 있을 때 유용 
+        */
+            
+        /*  같은 종류의 요소 중 n번째 요소 선택 가능 
+            ::지목하고 싶은 태그의 종류만 유의하면 됨 */ 
+        .food p:nth-of-type(1){
+            color: violet;
+            
+        }
+
+         .box-group>div>div:nth-child(1) {
+            color: red;
+        } 
+
+
+        /* dli요소중 클래스이름이 오렌지인에 빼고 나머지 애들 스타일 없앤다*/
+        .fruits li:not(.orange){
+            list-style: none;
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>복숭아</li>
+        <li>파인애플</li>
+    </ul>
+
+    <hr>
+
+    <!--div.food>div+p+p+span -->
+    <div class="food">
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>닭강정</p>
+        <span>짬뽕</span>
+    </div>
+    
+    <hr>
+
+    <div class="box-group">
+        <div>1
+
+        </div>
+        <div>2
+            
+        </div>
+        <div>3
+        <div>3-1</div>
+        <div>3-2</div>
+        <div>3-3</div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

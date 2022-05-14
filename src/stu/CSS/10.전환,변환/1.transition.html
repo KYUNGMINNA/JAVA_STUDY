@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: red;
+
+                /*
+                transition-property 기본값은 all(모두 적용) 
+                width ::가로 효과만 적용되게 함 
+                background 지정안하면 색상은 바로 변함(transition 적용안했기 때문)
+                */        
+           /* transition-property: width; */
+        
+
+            /* 전환 효과 시간 지정 : default 0s;*/
+           /* transition-duration: 2s;*/ 
+        
+
+            /*transition-property: background;
+            transition-duration: 700ms;*/
+            /* transition은 한개 이상 작성하면 마지막것만 적용 */
+            
+             /* duration과 delay는 값을 안주면 기본값 0*/
+            /*
+             단축 속성으로 적용하기  
+             :속성 안주면 all ,지속시간 딜레이는 안주면 0
+transition : 속성(all,with..),지속시간(필수 없으면 적용안됨),딜레이,타이밍함수  */
+            transition: 1s cubic-bezier(0.36,0,0.66,-0.56);          /*ease : 처음 빠르고 뒤에 느림 :기본 값  , ease-in ,ease-in-out,ease-out,linear..*/
+            /* transition-delay: 2s; */
+
+        }
+        .box:hover{
+            width: 300px;
+            background: skyblue;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="box">
+
+    </div>
+
+
+
+    
+</body>
+</html>

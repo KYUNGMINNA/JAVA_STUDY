@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+
+        .container{
+            width: 400px;
+            height: 200px;
+            border: 4px solid red;
+            margin-left: 200px;
+            margin-top: 100px;
+
+
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            border: 4px solid blue;
+            margin-top: 20px;
+            margin-left: 50%;  /* 부모 width 400px 의 50%*/
+            
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            border: 4px solid #000;
+            margin-left: 25%; /* 부모 width 400px 의 25%*/
+
+        }
+
+
+
+        .outer{
+            background: red;
+            height: 100px;
+
+        }
+        .inner{
+            width: 70%; /* 부모 요소의 70%*/
+            height: 100px;
+            background: blue;
+
+            /* maring:200px는  margin-top,bottom, left ,right 다 적용됨*/
+            /*margin: 100 200px;*/   /*값을 나열 할 수 있다 상하, 좌우 로 적용*/
+            /* 
+            단축 속성 사용시 
+            margin: 위 오른쪽 아래 왼쪽  (시계방향) -> 값 4개 주면 시계방향 적용
+            margin : 위 [좌우] 아래  ->값 3개  
+            margin : [상하], [좌우] -> 값 2개
+            margin : [상하좌우] ->값 1개 
+            */
+
+            /* 상하는 0 , 좌우는 알아서 계산해서 똑같이 나눔
+               자주 사용 됨   :: 가운데로 정렬됨 */
+            margin:0 auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <!-- .container>.box$*2  -->
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        .a{
+            border: 2px solid black;
+            width: 500px;
+            
+        }
+        .b div{
+            margin-top: 20px;
+            margin-left: 10px;
+            display: inline-block;
+            width: 100px;
+            text-align: left;
+            height: 120px;
+            border: 2px solid black;
+            font-size: 15px;
+            
+        }
+        .c div{
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            width: 100px;
+            text-align: left;
+            height: 120px;
+            border: 2px solid black;
+        }
+        
+
+        .container{
+            margin:0 auto;
+            width: 50%;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .inner{
+            width: 25%;
+            padding: 5px;
+            box-sizing: border-box;
+            float: left;  
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .inner .content{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <section class="a">
+        <p>
+            <div class="b">
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+            </div>
+            <div class="c">
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+                <div><img src="./img/1.png" alt="">모든패딩 5px</div>
+            </div>
+        </p>
+    </section>
+<hr>
+<br><br><br>
+    <div class="container clearfix">
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="./img/1.png" alt="사진"/>
+            <div class="content">
+                    <div>모든패딩 5px</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

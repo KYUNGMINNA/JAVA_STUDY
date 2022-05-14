@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- relative는 자기자신을 기준으로 함 
+        
+     position:relative으로 지정하면 지목한 것만 움직임
+    나머지 태그들은 영향 받지않음
+    (즉 ,다른 태그 움직이지 않음 --빈 공간을 채우지 않음)
+    
+    div 태그 3개 있다면 , 2번 div의 태그 자리는 유지하고 , 위치만 움직인것이라
+    3번태그는 그대로 있음  
+    -->
+
+    <style>
+
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 4px dashed orange;
+            border-radius: 10px; /* 50% ::원 만들어짐*/
+            font-size: 30px;
+
+
+        }
+        .relative{
+            
+            position: relative;
+            left: 70px;
+            top: -50px; /* = bottom :50;과 동일*/
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">1</div>
+    <div class="box relative">2</div>
+    <div class="box">3</div>
+
+
+
+
+    
+</body>
+</html>

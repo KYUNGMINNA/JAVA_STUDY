@@ -1,0 +1,470 @@
+/*======= 웹 폰트 선언 =======*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* 디자인 시작 시 기본적으로 선언하는 문법 */
+* {
+    /* 기본 선언: 마진, 패딩 0, 요소 크기를 border를 기준으로.*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    min-width: 320px;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    /*사이즈가 변해도 넓이를 유지*/
+    height: auto;
+    /* 사이즈가 변해도 비율을 유지 */
+}
+
+input,
+textarea,
+button,
+select {
+    /* 고유하게 적용되어있는 form 관련 요소들을 제거해서
+     여러 브라우저에서 동일한 디자인을 얻게 함.
+    :브라우저 제공 기본 디자인 제거 */
+    -webkit-appearance: none;
+    /*크롬, 사파리*/
+    -moz-appearance: none;
+    /*파이어폭스*/
+    appearance: none;
+    /*ie, edge*/
+    border: none;
+}
+
+ul,
+ol,
+dl,
+li {
+    /*리스트 스타일은 사용할 일이 많지 않아요.*/
+    list-style: none;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ============header==========**/
+header {
+    position: fixed;
+    padding: 0 15px;
+    left: 0px;
+    top: 0px;
+    z-index: 50;
+    background: #263238;
+    width: 100%;
+
+}
+
+header .container {
+    padding: 0;
+
+}
+
+.navbar {
+    margin-bottom: 0;
+
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.nav>li>a {
+    font-size: 15px;
+    color: white;
+}
+
+/* 메뉴에 hove,focus 진행 시 색상 변경 */
+.nav>li a:hover,
+.nav li a:focus {
+    background: #304047;
+}
+
+/* 토글메뉴(화면이 작아졌을(브라우저 크기 작을) 때의 메뉴) 윤곽색, 버튼 배경색 변경 */
+.navbar-toggle {
+    border-color: white;
+}
+
+.navbar-toggle>.icon-bar {
+    background: white;
+}
+
+/* 로그인 메뉴 드롭다운 열릴 시 배경색 변경  
+: .open은 자바스크립에서 자동으로 추가해주는 클래스이름(드롭다운시) */
+.nav .open a:focus {
+    background: #304047;
+}
+
+
+/* ======================본문====================== */
+
+
+section {
+    margin-top: 75px;
+}
+
+/* 섹션 전체 영역 디자인 지정 */
+.prod-list,
+.prod-link {
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+}
+
+/* 
+    기본 부트스트랩의 패딩은 15px
+    ul과 li 사이 , li와 li사이의 패딩을 좀 줄이겠습니다. 
+*/
+.prod-list,
+.prod-list>li[class^="col-"] {
+    padding: 5px;
+}
+
+/* 상품 hover시 테두리 빛나게 */
+.prod-link:hover {
+    border: #4285f4;
+}
+
+.prod-link>.arrow {
+    display: block;
+    /* 인라인 요소는 position 속성 사용 불가*/
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    background: #ccc;
+    color: #fff;
+    opacity: 1;
+
+    left: 15px;
+    bottom: 36px;
+}
+
+.prod-link .hover {
+    width: 100px;
+    background: #4285f4;
+    opacity: 0;
+
+}
+
+.prod-link:hover .arrow {
+    opacity: 0;
+}
+
+.prod-link:hover .hover {
+    opacity: 1;
+}
+
+
+/*========================= fotter ==================*/
+
+footer {
+    margin-top: 70px;
+    background: #304047;
+    padding: 30px 0 15px;
+
+}
+
+footer .copyright {
+    font-size: 13px;
+    color: white;
+    line-height: 20px;
+
+}
+
+footer .fotter-menu li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+footer .fotter-menu li a {
+    color: #f1f1f1;
+    font-size: 13px;
+
+}
+
+/*=================== join ======================*/
+.titlebox {
+    width: 250px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 70px auto;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 20px;
+
+}
+
+.join-form {
+    float: none;
+    margin: 0 auto;
+}
+.join-form form{
+    border-radius: 8px;
+    padding: 15px;
+    /* box-shadow : 1,2,3,4,color ;  
+        1:수평 방향 그림자 위치 -> 양수 :오른쪽, 음수 : 왼쪽
+        2:수직 방향 그림자 위치 -> 양수 :박스 아래, 음수 : 박스 위
+        3:그림자 선명도 -> 양수:그림자 끝이 흐려짐, 음수는 X 주지않음
+        4:그림자 확산 거리 -> 양수 : 확대(길어짐) , 음수 : 축소(짧아짐)
+        color: 그림자의 색상.
+    */
+                    /*  선명도 안줌*/
+    box-shadow: 0px 8px 16px rgba(0, 0,0,0.15);
+}
+
+.input-group-addon{
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.from-control, from-group .btn{
+    border-radius: 0;
+}
+.from-control:hover{
+    border-color: #555;
+}
+
+/*----------------     board_list.html ---------------------------*/
+.board-table{
+    margin: 0 auto;
+    float: none;
+}
+.search-wrap{
+    margin-bottom: 20px;
+
+}
+.search-btn,
+.search-input,
+.search-select{
+    float: right;
+}
+.search-input{
+    width: 200px;
+}
+.search-select{
+    width: 100px;
+
+}
+.table-bordered>thead>tr>th{
+    background: #e7f2f9;
+    color: #003366;
+}
+.table-bordered>tbody>tr>td>a,
+.table-bordered>tbody>tr>td>a:hover{
+    color: black;
+}
+.pagination{
+    margin: 0;
+}
+.text-center .btn{
+    float: right;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 10px;
+}
+
+/* ----------------------board_write.html--------------------------------*/
+.write-wrap{
+    width: 70%;
+    margin: 0 auto;
+    float: none;   /*부트스트랩에 float적용되어 있어서 ,margin 0 auto 쓰려면 float:none 해야 한다*/
+}
+.t-control .t-title{
+    width: 100px;
+
+}
+.t-control input{
+    width: 200px;
+
+}
+.t-control textarea{
+    resize: none;
+}
+.titlefoot{
+    text-align: center;
+    margin: 70px auto;
+}
+
+
+/* -----------------------------board_content.html 의 content------------------ */
+.content-wrap{
+    margin: 0 auto;
+    float: none;
+}
+.cotent-wrap #content{
+    resize: none;
+}
+.btn-dark{
+    background: black;
+    color: white;
+}
+
+/* --------------------borard_content.html의 reply영역-------------------------------- */
+.reply-wrap{
+    background: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+.reply-wrap .reply-image{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.reply-wrap .reply-content{
+    padding-left: 60px; /* 크기 감소(padding을 줌(전체영역이 box-sizing :border-box라서 내부의 컨텐츠 요소가 줄기 때문에)*/
+
+}
+.reply-content textarea{
+    resize:none;  /* vertical,horizontal.... */
+    width: 100%;
+    margin-bottom: 10px;
+}
+.reply-input>.from-control{
+    width: 200px;
+    margin-bottom: 5px;
+}
+.reply-input{
+    float: left;
+}
+.reply-group button{
+    float: right;
+}
+.reply-group small{
+    margin-left: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+.reply-group .right{
+    text-decoration: none;
+    color: #777;
+    float: right;
+}
+
+/* -------------------------------------board2.html-------------------------------- */
+.prod-list-inner img{
+    width: 100%; /*prod-list-inner의 100% : 빈 공간 없이 채움*/
+}
+.prod-content{
+    padding: 15px 0;
+
+}
+.prod-content .info span{
+    display: block;
+}
+.prod-content .info{
+    float: left;
+}
+.prod-content .price{
+    float: right;
+}
+
+.prod-color {
+    margin-top: -40px;
+    float: left;
+    transition: all 0.2s ease-in-out;  /*동적인 효과를 위해*/
+    opacity: 0;
+}
+
+.prod-color li {
+    width: 50px;
+    float: left;
+}
+.prod-list-inner:hover .prod-color{
+    opacity: 1;
+}
+/*--------------------------------board_detail.html---------------------------*/
+.detail-info{
+    height: 300px;
+    font-size: 20px;
+
+    /* 강사 
+    margin-bottom: 120px;
+    */
+}
+.detail-info .title{
+    padding-bottom: 10px;    
+    border-bottom: 1px solid lightgray;
+
+    /* 강사 
+    font-size: 24px;
+    */
+}
+.detail-info .price{
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    font-weight: bold;
+
+    /*강사
+    font-size: 30px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding:15px 0;
+     */
+}
+.detail-info .delivery{
+    font-size: 12px;
+
+    /* 강사 
+    color: #888;
+    */
+}
+
+
+.detail-control .price .left{
+    font-size: 20px;
+    float: left;
+
+    /* 강사
+    float: left;
+     */
+} 
+.detail-control .price .right{
+    font-size: 20px;
+    float: right;
+    font-weight: bold;
+
+    /*강사
+    float: right; */
+}
+
+
+.detail-control .order button {
+    width: 50%;
+    float: left;
+}
+
+/*강사 
+.detail-control .price .left{
+    font-size: 18px;
+    line-height: 45px;
+}
+.detail-control .price .right{
+    font-size: 30px;
+}
+
+
+.detail-control .order .left,
+.detail-control .order .right{
+    width: 50%;
+    height: 60px;
+    font-size: 18px;
+}
+*/

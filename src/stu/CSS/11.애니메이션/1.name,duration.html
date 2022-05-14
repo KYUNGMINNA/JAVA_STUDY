@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: green;
+
+        }
+        .box:hover{
+            /* animation-name: grow-up;
+            animation-duration: 3s; */
+
+             /*
+              애니메이션 몇번 적용하고 싶은지
+             animation-iteration-count :횟수;
+              :defualt는 1번 적용 */
+            /* animation-iteration-count: infinite;
+            
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s; */
+
+            /*애니메이션의 진행 방향을 결정 :
+            default는 noraml(0% -> 100%)
+            reverse (  100 % -> 0%)  
+            alternate (0%->50%->100%->50%->0%)  :가장 자연스러움 
+            alternate-reverse(100-> 50-> 0-> 50-> 100)
+            ....
+            */
+            /* animation-direction: alternate-reverse;  */
+
+
+            /* 단축속성으로 적용  :이름과 지속시간은 거진 필수 
+            animation: 이름 지속시간 [타이밍함수 대기시간 반복횟수 반복방향]*/
+            animation: grow-up 2s ease-in-out  1s infinite alternate;
+
+
+        }
+            /* 애니메이션 커스텀  @keyframes 이름{ } */
+        @keyframes grow-up {
+            0%{
+                width: 100px;
+
+            }
+            50%{
+                width: 500px;
+            }
+            100%{
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+
+    </div>
+
+
+
+
+</body>
+
+</html>

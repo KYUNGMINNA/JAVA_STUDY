@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--박스보다 내용이 넘칠 때-->
+
+    <style>
+
+
+        .parent{
+            width: 300px;
+            height: 250px;
+            border: 4px solid #000;
+
+            /* overflow default는 visible 이다 : 
+                oveflow 라고 안써도 visible이 적용되어있음
+                auto는 크기 초과되면 'scroll' 적용되고 안넘치면 그대로 
+                height 크기를 조절해보면 알 수 있다.  */
+            overflow:auto;
+
+        }
+        .child{
+            width: 100px;
+            height: 200px;
+            background:red;
+            border: 4PX solid orange;
+            font-size: 40PX;
+        }
+
+        .txt1{
+            border: 1px solid #777;
+            width: 300px;
+            height: 300px;
+            overflow:auto;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+    </div>
+    <hr>
+    <p class="txt1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum lacus eget sodales elementum. Aenean elementum lobortis pharetra. Suspendisse non leo et nunc luctus suscipit sed quis ipsum. Etiam in fringilla enim. Maecenas maximus eros non elit aliquam dignissim. Ut ornare porttitor odio, at interdum justo rutrum sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla metus eu quam ornare vulputate. Vivamus ultricies congue nisi, a malesuada turpis maximus vitae. Phasellus tincidunt tempus malesuada. Vivamus est erat, tristique vitae iaculis ut, pretium eu augue. Proin quis lectus vel massa finibus varius nec vel lacus. Cras efficitur pharetra gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam gravida nunc vel rhoncus ultrices.
+
+        Donec eleifend mauris eu ullamcorper feugiat. Praesent consectetur sapien egestas, finibus nulla in, accumsan turpis. Quisque pellentesque commodo nibh, nec condimentum tellus. Nulla suscipit condimentum venenatis. Duis tempor accumsan posuere. Proin imperdiet bibendum metus, id tempor metus cursus eu. Nam id iaculis nibh. Ut et sem in ex porttitor accumsan. Cras magna ante, faucibus sed commodo id, dictum id mauris. Vivamus placerat ac lorem quis facilisis.
+    </p>
+
+
+    
+</body>
+</html>

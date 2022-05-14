@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        .box{
+            width: 550px;
+            height: 350px;
+            border: 2px solid gray;
+
+            /*
+            background-color: yellow;
+            background-image: url("./images/sky.jpg");
+            background-size: auto; 
+            background-repeat: no-repeat;
+            background-position :50 % 30%
+
+
+            */
+            /* 
+            background-size : auto,cover,contain 
+             auto는박스의 사이즈에 맞게 알아서 조정해줌(기본값) | 200px 150px |
+             cover : 요소의 넓은 너비(가로 혹은 세로)에 맞춰 
+                     사진의 비율을 조정하여사용 ::사진 잘릴 가능성 농후 
+                     -->박스 빈곳 없게 채우기 용
+            contain :크기 비율을 유지하고 짧은 너비에 맞춤(이미지 잘리지는 않고 
+            빈공간 발생 가능성 있음 )
+            */
+                 /*
+                 background-repeat :no-repeat ,repeat,repeat-x,repeat-y;
+                 no-repeat : 이미지 빈공간 있을 시 반복 안함(즉,빈공간 채우지 않음) 
+                 ::default가 repeat임 || repeat-x : 가로만 반복(채움)
+                 ||repeat-y : 세로만 반복(채움)
+                 */
+            
+
+                 
+            /*  
+            background-position :50 % 30%; , 
+            default는 0  0 :왼쪽 상단 | 100 100(오른쪽 하단) 
+            50% 30% ;  :가로로 50 ,세로로 30  위치 이동한 이미지      
+             20% __ ;  : 가로만 쓰면 ,세로는 가운데 위치 정렬 
+                 
+               %,px,em으로 지정이 가능 . 
+               가로축과 세로축을 한번에 지정 가능
+               가로축만 사용하면 세로축은 가운데 정렬 
+               % ->왼쪽 상단 0% 0%,오른쪽하단 100% 100%
+            */                  
+
+            /* 단축 속성  :지정 안하면 기본값 들어감  */
+            background: yellow url(./images/sky.jpg) no-repeat 0% 0% / cover;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    
+<div class="box"></div>
+
+
+
+    
+</body>
+</html>

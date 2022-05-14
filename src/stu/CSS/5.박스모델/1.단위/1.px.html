@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+        
+        /* 
+        px(=고정단위)는 디바이스마다 길이가 상이 할 수 있다.
+        다른 기준(부모의 영향)영향 받지 않는다 독립적
+        */
+        
+        body * {
+            border :2px solid black;
+        }
+
+        .container {
+            width: 1200px;
+        }
+
+        /*  %는 직속 부모 요소(.container)에 영향을 받아
+                 :: 600이 된다. */
+        .parent{
+            width: 50%;
+        }
+
+        /* 직속부모의요소에 영향을 받음(.parent)   :: 600의 30%이다 
+            %지정 안하면 100%로 적용 된다 */
+        .child{
+            width: 30%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+
+
+
+    <div class="container">Container
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+</body>
+</html>

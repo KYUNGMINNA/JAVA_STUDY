@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* HTML의 기본 폰트사이즈는 16px이다 */
+        
+        html{
+            font-size: 10px;
+        }
+
+        body * {
+            border :2px solid black;
+        }
+        /* em은 자기 자신의 폰트사이즈를 대비 몇배인지  길이 : em*fontsize  */
+        
+        .container {  /*  60*20 해서 width은 1200px이 됨*/
+            width: 60em;
+            font-size: 20px;
+        }
+
+        .parent{   /* font-size 상속이 되어 font-size는 2 em*20px==>40px */
+            width: 50%;
+            font-size: 2em;
+        }
+
+        /* rem 은 HTML의 폰트대비(default는 16 /커스텀 가능) 몇배인지   */
+          .child{
+            width: 30%;
+            font-size: 3rem;  /* html 폰트사이즈 10으로 해서
+                                 10*3==>30px됨 */
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div class="container">Container
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+
+
+</body>
+</html>

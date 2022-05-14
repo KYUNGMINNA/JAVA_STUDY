@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        .box{
+            width: 150px;
+            height: 100px;
+            background: red;
+            font-size: 30px;
+            color: #fff;
+            margin: 10px;
+
+            /* left : |1 2 3   |  &&  right : |   3 2 1| */
+            float: left;
+        }
+
+        .new-box{   
+            /* 
+                float는 그냥 공간에 띄어 있는 것이라서 
+                .box가 float:left일때  new-box와 box가 중복되어 작성됨
+                4.1 2  3
+            */
+            
+            width: 200px;
+            height: 150px;
+            background: orange;
+            
+            /*
+             float 박스 들이 고정되어 있다고 생각하게 되어 
+                나머지는 박스형식으로 산다 
+            clear : both 로 쓰면 양쪽다 해제
+            
+            ***float은 배치 끝나고 celar 해줘야 밑에 요소들 영향 안받는다 
+            */
+            clear: left;
+            
+        
+        }
+
+
+    </style>
+</head>
+<body>
+
+    
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="new-box">4</div>
+
+
+    
+</body>
+</html>

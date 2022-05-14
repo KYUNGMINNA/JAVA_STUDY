@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+
+    <style>
+        .list-wrap{
+            width: 50%;
+            border: 1px solid black;
+            margin: 20px auto 0;
+            padding: 10px;
+            position: relative;
+        }
+        .list-img{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+        }
+        .list-img img{
+            width: 50px;
+            
+        }
+        .list-content{
+            padding-left: 60px;
+        }
+        textarea{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+           
+            resize: none; /* textarea size 조절 불가능하게 막음*/
+
+
+        }
+        .list-control{
+            padding-left: 60px;
+
+        }
+        .list-input{
+            float: left;
+        }
+        input{
+            display: block;
+            width: 100px;
+        }
+        button{
+             /*inline 요소에 float을 적용하면
+             블록 요소로 변경되어 float이 적용됩니다.
+            --display가 block으로 변경
+             */
+            
+             float: right;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    
+
+
+
+        /* .list-input p:nth-of-type(1){
+            font-weight:  bold;
+            margin-bottom: 10px;
+        }
+ 
+
+        .list-btn button{
+            margin-top: 30px;
+        } */
+
+
+
+        /* 강사*/
+        strong{
+
+            font-weight: bold;
+        }
+        .list-input .writer{
+            float: left;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+<div class="list-wrap clearfix">
+    <div class="list-img">
+        <img src="./img/bgimg.png" alt="사진">
+    </div>
+
+    <div class="list-content">
+        <textarea  rows="10" placeholder="댓글내용">
+        </textarea>
+    </div>
+
+    <div class="list-control">
+        <div class="list-input">
+            <input type="text">
+            <input type="text">
+        </div>
+        <button type="button">등록하기</button>
+    </div>
+</div>
+
+<div class="list-wrap ">
+    <div class="list-img">
+        <img src="./img/bgimg.png" alt="사진">
+    </div>
+
+    <div class="list-control clearfix">
+        <div class="list-input">
+            <p class="writer"><strong>작성자</strong></p>
+            <p>내용</p>
+        </div>
+
+        <div class="list-btn">
+            <button type="button">삭제</button>
+            <button type="button">수정</button>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>

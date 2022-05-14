@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+        .grandparent{
+            width: 400px;
+            height: 300px;
+            padding: 100px;
+            border: 4px dashed gray;
+            position:relative;
+
+        }
+        .parent{
+            width: 300px;
+            height: 300px;
+            border: 4px dashed lightgray;
+            position:relative;
+        }
+        .child{
+            width: 120px;
+            height: 80px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 10px;
+            font-size: 30px;
+
+        }
+        .absolute{
+            /*absolute는 부모를 기준으로 영향을 받는다-- 내가 원하는 부모를 기준으로 움직임
+                그래서 원하는 부모에 position:relative를 줘야 한다.
+                부모에 relative주면 , 부모를 기준으로 적용됨  
+                그리고 div 1,2,3이면 2번이 absolute라 가정하면 ,
+                3번 div가 2번자리 차지함(빈자리 채움)
+
+                absoulte는 가장 가까이 있는 부모에 영향을 받음
+                --grand, par 둘다 있으면 가까운 par에 적용 
+
+               
+                만약,부모에 position이 없으면 , 보고 있는 화면을 기준으로 움직임
+
+                브라우저 별로 값을 하나만 주면 제대로 인식안하기 때문에
+                top /bottom / left/ right에서  left만쓴다면
+                top 이나 bottom중 하나를  0이라고 값을 준다 
+            */
+            position: absolute;
+            right:100px;
+            bottom: 150px;
+
+        }
+    </style>
+</head>
+<body>
+
+    
+<div class="grandparent">
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child absolute">2</div>
+        <div class="child">3</div>
+    </div>
+</div>
+
+
+
+    
+</body>
+</html>

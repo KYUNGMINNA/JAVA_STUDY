@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+        .container{ 
+            /* 자식인 box가 float되어 없어졌다고 인식 */
+
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            
+            /*
+            --자식의 float해제 하는 방법
+             SOL1) 자식인.box 인식됨 
+            :overflow 속성은 기존의 영역을 새롭게 영역을 다시 구축함
+            추후에 overflow기능 사용 불가 
+            야매 방식
+
+            overflow: hidden;
+
+            */
+
+
+
+        }
+        .box{
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellow;
+            font-size: 50px;
+            float: left;
+        }
+        
+        /*
+        --자식의 float해제 하는 방법
+             SOL2)  의미없는 div를 만들어 사용하는 방법 
+        .clear-box{
+            clear: both;
+        }*/
+          
+        /*
+        --자식의 float해제 하는 방법  
+             SOL3) 가상 클래스를 만들어 사용하는 방법  :부모 요소에 적용시켜야 함!   */
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    
+<!--자식의 float해제 하는 방법 SOL3) clearfix라는 이름이 관례로 사용됨  
+가상클래스를 만들어 사용 하는 방법   ::이게 가장 바람직한 방법임 -->
+<div class="container clearfix">
+    <div class="box">1</div>
+    <div class="box">2</div>
+
+    <!--자식의 float해제 하는 방법
+             SOL2)  의미없는  div를 만들어 사용하는 방법 
+    <div class="clear-box"></div>
+    -->
+</div>
+
+
+    
+</body>
+</html>

@@ -39,7 +39,7 @@
 	 
 	 
 	 %>
-	 	<a href="el_result.jsp">세션,어플리케이션 데이터를 화면에 출력하기</a>
+	 	<a href="12_el_result_0517.jsp">세션,어플리케이션 데이터를 화면에 출력하기</a>
 	 
 </body>
 </html>

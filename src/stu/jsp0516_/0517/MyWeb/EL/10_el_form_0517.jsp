@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="el_con.jsp">
+	<form action="11_el_con_0517.jsp">
 		<p>
 			#이름:<input type="text" name="name"><br>
 			#별명:<input type="text" name="nick"><br>

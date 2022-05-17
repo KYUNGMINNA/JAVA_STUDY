@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="el_obj02.jsp">
+<form action="14_el_obj02_0517.jsp">
 	<p>
 		#아이디:<input type="text" name="id"><br>
 		#비밀번호:<input type="password" name="pw"><br>

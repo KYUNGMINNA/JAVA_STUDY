@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="jstl_choose.jsp">
+	<form action="18_jstl_choose_0517.jsp">
 		#이름 :<input type="text" name="name"><br>
 		#나이 :<input type="text" name="age"><br>
 		<input type="submit" value="확인">

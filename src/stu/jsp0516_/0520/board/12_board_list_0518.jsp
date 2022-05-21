@@ -87,7 +87,7 @@
                   <td>${b.boardId}</td>
                   <td>${b.writer}</td>
                   <td>
-                    <a href="/MyWeb/content.board?bId=${b.boardId}&amp;${(param.page==null)?(page=1&cpp=10):(page=${param.page}&cpp=${param.cpp})'}"> ${b.title}</a>
+                    <a href="/MyWeb/content.board?bId=${b.boardId}&page=${param.page==null?1:param.page}&cpp=${param.page==null?10:param.cpp}"> ${b.title}</a>
                     &nbsp;&nbsp;
                     <c:if test="${b.newMark}">
                     	<img alt="newMark" src="/MyWeb/img/icon_new.gif">

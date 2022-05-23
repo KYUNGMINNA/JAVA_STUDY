@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //논리 타입  : 소문자로 flase, true  
+        var logical=false;
+        logical=true;
+
+
+        //JS에서는  논리 조건식에 0 들어가면 false라고  해석 , 0이 아닌 나머지 정수를 true로 해석
+        //0은 false로 , 0이 아닌 나머지 정수를 true로 해석 
+        var apple=3;
+        if(apple){
+            console.log('사과가 '+apple+'개 있습니다.');
+        }else{
+            console.log('사과가 하나도 없습니다');
+        }
+
+
+        //null 
+        var banana='바나나';
+        banana=null;
+        console.log(typeof banana);
+        console.log(banana); //null 값은 들어왔지만 ,외부에 의해 이상한 값이 들어가는것 : 값 참조 x
+
+        var i;
+        console.log(typeof i); // undefined 값이 초기화가된 적이 없는것  : 값 참조 x
+
+    </script>
+
+
+
+
+
+</body>
+</html>

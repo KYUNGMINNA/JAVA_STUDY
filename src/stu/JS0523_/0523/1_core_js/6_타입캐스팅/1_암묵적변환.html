@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        문자열은 + 연산을 제공 하고 있어 ,문자열로  인식 되며 
+         나머지 연산은 제공하고 있지 않아 ,문자열을 숫자로 바꿔서 연산한다.
+        */
+
+
+        var ex=10+'20';  //1020 :숫자 10을 문자 10으로 바꿔서 연산함 ( 문자열 연산자는 +를 지원하기 때문)
+        console.log('ex : '+ex);
+
+        ex=10*'3';   //30  :문자열 연산자는 *을 지원하지 않기 때문에 , 문자열 3이  정수3으로 바뀌여서 연산
+        console.log('ex :'+ex);
+
+        var ex2=100+''; // 문자열 100 이 됨 
+        console.log('ex2 :'+ex2)
+        
+        
+        //문자열 타입의 암묵적 숫자 변환 
+        ex2=+ '550';  // +'550'은 + 덕분에 정수형으로 변환된다.
+        console.log('ex2 :'+ex2);//550
+        console.log(typeof ex2);//number
+
+        console.log('----------------------')
+
+        ex2=true+'';
+        console.log(ex2);  //true
+        console.log(typeof ex2);//string
+        
+        console.log('=====================')
+
+        
+        // 논리 타입의 암묵적 숫자 변환 
+        ex2=+false;
+        console.log(ex2);  //0
+        console.log(typeof ex2); //number
+        console.log('||||||||||||||||||||||')
+
+        ex2=+null;
+        console.log(ex2);  //0
+        console.log(typeof ex2); //number
+        
+
+    </script>
+
+
+
+
+
+</body>
+</html>

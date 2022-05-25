@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     
+    <ul id="fruits">
+        <li id="apple">APPLE</li>
+        <li id="banana">BANANA</li>
+        <li id="grape">GRAPE</li>
+        <li id="pine">PINEAPPLE</li>
+    </ul>
+
+    <ol>
+        <li>야야야</li>
+        <li>왜왜왜</li>
+        <li>뭐뭐뭐</li>
+    </ol>
+
+    <script>
+        //id name은 UNIQUE !!!!!!!
+        const $ul=document.getElementById('fruits');
+
+        //HTMLCollection은 유사 배열 -- 지목 잘못하면 null이 옴   || 배열 메서드 사용 불가!
+        //유사 배열(객체임!!!) :태그 이름같은것들이  여러개 올수 있어서 유사배열이다. 
+        //배열처럼 사용가능(인덱싱,length,반복문) 
+        //key가 인덱스처럼 구성되어 있고, length 프로퍼티가 있음.
+        const $test=document.getElementsByTagName('li');
+        console.log($test);
+
+        //대부분의 경우에는 문서노드부터접그하지만(document)
+        //이미 취득한 요소가 있는 경우에도 함수를 이용해서 
+        //요소 내의 요소를 취득할 수 있습니다.
+        const $liArray=$ul.getElementsByTagName('li');
+        console.log($liArray);
+
+        console.log($liArray[0]);
+
+        console.log($liArray.length);
+
+        console.log($liArray.banana);
+
+        //for of : 향상 for문
+        for(let $ele of $liArray){
+            $ele.style.fontStyle='italic';
+        }
+
+        //일반 for문
+        for(let i=0;i<$liArray.length;i++){
+            $liArray[i].style.color='red';
+        }
+        
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

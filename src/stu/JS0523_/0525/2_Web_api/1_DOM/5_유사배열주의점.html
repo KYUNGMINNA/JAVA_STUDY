@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        ul>li{
+            font-size: 30px;
+        }
+        .red{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+        <ul id="fruits">
+            <li class="red">APPLE</li>
+            <li class="red">Banana</li>
+            <li class="red">Grape</li>
+            <li class="red">Peach</li>
+        </ul>
+
+    
+    <script>
+
+        //유사 배열 NodeList 리턴  :quertSelectAll를 사용해야함
+        //const $elements=document.querySelectorAll('.red');
+
+
+        //유사배열 HTMLCollection 리턴 :getElementByClassName,ByTageName
+        const $elements=document.getElementsByClassName('red');
+
+        //배열이 아니라서, 배열 메서드 사용 못함!!!
+        //let $ele=$elements.pop();
+
+        //유사배열객체를 배열처럼 제어할 때는 순수 배열로 변경해서 써야함
+        //const realArray=Array.from($elements); // NodeList와 HTMLCollection 둘다 사용 가능 
+        const realArray=[...$elements]; //ES6 의 순수 배열로 만들기  : 위의 동작과 같음
+
+
+        let $ele=realArray.pop(); //정상 동작 
+        console.log(realArray);
+
+        for(let i=0;i<realArray.length;i++){
+            realArray[i].className='blue';
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

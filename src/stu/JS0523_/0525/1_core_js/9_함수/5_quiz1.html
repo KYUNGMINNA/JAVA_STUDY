@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        var total=0;
+        var avg=0;
+        function calcTotAvg(...numbers){
+            
+            for(var a of numbers){
+                total+=a;
+            }
+            avg=total/numbers.length;
+            return{
+                total:total,
+                avg:avg
+            };
+        }
+
+        var re=calcTotAvg(1,2,3,4,5,6,7,8,9,10);
+        console.log('total : '+re.total);
+        console.log('avg : '+re.avg);
+
+
+        var calcTotAvg2=(...numbers) => {
+            var total=0;
+            var avg=0;
+            for(var a of numbers){
+                total+=a;
+            }
+            avg=total/numbers.length;
+            return { total,avg};  //ES6 문법 : 변수이름과 프로퍼티 이름이 동일 할때 적용
+        
+        }
+
+        var result=calcTotAvg2(90,80,70,60,50);
+        console.log(`총 합은 : ${result.total} ,평균 :${result.avg}`);
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

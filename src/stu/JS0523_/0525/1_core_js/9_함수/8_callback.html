@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+
+        //콜백 함수 : 비동기적인 방식으로 ,
+        // ex) 회원가입 때 아이디 중복여부 체크 할 때 ,페이지 이동없이(화면전환) 중복체크를 위한 DB 호출가능케함
+
+        
+
+        function temp(i){ //선언만 되었을 뿐 , shownumber가 호출이 되었을 때 실행이 되는 함수라서 , 비동기적 방식(callback)
+            if(i%2===0){
+                console.log(i);
+            } 
+        }
+        
+
+
+
+        function showNumbers(n,func){
+            for(var i=1;i<=n;i++){
+                func(i);
+            }
+        }
+
+        showNumbers(10,temp); //동기적으로 작성된 방식
+
+        /*
+        showNumbers(10,i=>{
+            if(i%2===0){
+                console.log(i);
+            }
+        })
+        */
+
+
+    var plusMinus=function(a,b,callback){
+        callback(a+b,a-b);
+    }
+
+    plusMinus(10,20,function(res1,res2){
+        console.log(res1);
+        console.log(res2);
+
+
+    });
+        
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

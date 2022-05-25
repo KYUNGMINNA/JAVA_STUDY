@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        //const는 상수  : 선언 후 수정 불가
+
+        const x='메롱';
+        console.log(x);
+
+        // x='안메롱'; // 상수로 선언되어 있어 변경 불가능 
+
+
+        //const와 객체(객체,배열 ,함수 마찬가지)
+        const person={
+            name:'park',
+            age:20
+        };
+        //객체의 내부 내용은 바뀌어도 상관없으나, 객체 자체가 바뀌는것은 불가능함.
+        person.name='kim';
+        console.log(person.name); 
+
+        
+        //안되는 코드(객체 자체를 변경하는것은 안됨 ( 주소 값이 바귀기 때문))
+        person={
+            name:'lee',
+            age:30
+        };  
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

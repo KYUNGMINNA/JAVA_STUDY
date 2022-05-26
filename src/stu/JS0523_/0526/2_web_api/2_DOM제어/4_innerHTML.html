@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <ul id="fruits">
+        <li id="apple">Apple</li>
+    </ul>
+
+
+
+
+
+    <script>
+        const $fruits=document.getElementById('fruits');
+
+        //console.log($fruits.innerHTML); // ::   <li id="apple">Apple</li> ::태그와 태그안에 있는 텍스트 포함
+        
+        //노드 추가   : = 을 쓰면 , 기존의 태그를 삭제하고 대체
+        $fruits.innerHTML +='<li class="banana">Banana</li>';
+
+
+        //노드 삭제
+        $fruits.innerHTML=''; 
+        console.log(!!$fruits.children.length); // 자식 존재의 유무를 true,false로 나오게 함 (!!을 붙여서)
+
+
+
+        /*
+        innerHTML로만 노드를 제어하지 말것!
+        보안과 성능에 문제가 좀 있습니다.
+        HTML 변환이 필요한 문자열에만 사용하는것이 좋다.
+        
+        
+        */
+
+
+    </script>
+</body>
+</html>

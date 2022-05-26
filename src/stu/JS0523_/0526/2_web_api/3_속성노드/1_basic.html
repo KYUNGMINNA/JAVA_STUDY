@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <input type="text" id="name" value="kim" class="user-name">
+    
+    <script>
+
+        const $input=document.querySelector('input');
+
+        console.log($input.attributes); // NameNodeMap 객체 나옴  ::유사 배열
+        console.log($input.attributes[0].value);
+        console.log($input.attributes[1].value);
+        console.log($input.attributes.id.value);
+        console.log($input.attributes.value.value);
+
+        //속성 값 바꾸기
+        $input.attributes.value.value='lee';
+        console.log($input.attributes.value.value);
+        $input.attributes.type.value='password';
+        console.log($input.attributes.type.value);
+        
+        
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

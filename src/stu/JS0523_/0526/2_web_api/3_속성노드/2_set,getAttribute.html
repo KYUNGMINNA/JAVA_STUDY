@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="name" value="kim" class="user-name">
+    
+    <p id="text">Hello</p>
+
+
+    <script>
+                                                                                    
+        const $input=document.querySelector('input[type=text]');
+
+        //input의 value 속성의 값을 얻고 싶다.
+        // const $inputValue=$input.attributes.value.value;
+        const $inputValue=$input.getAttribute('value'); //위와 같다
+
+        console.log($inputValue);
+
+
+        //value 속성의 값을 변경
+        $input.attributes.value.value='메롱';
+        $input.setAttribute('value','안녕하세요');
+
+
+
+        //p태그에 title 속성 추가 
+        const $paragraph=document.getElementById('text');
+        $paragraph.setAttribute('title','메롱');
+
+
+        //어트리뷰트 존재 여부
+        console.log($paragraph.hasAttribute('class'));
+
+        if(!$input.hasAttribute('class')){
+            //없으면 클래스를 부여해라 ~  
+        }else{
+            //있으면 클래스를 제거해라 
+            $input.removeAttribute('class');
+        }
+
+        //속성 값 삭제
+        $paragraph.removeAttribute('class');
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label>
+        <input type="checkbox" >
+        <em class="message"></em>
+    </label>
+    
+    <script>
+
+        const $checkbox=document.querySelector('input[type=checkbox]');
+        const $em=document.querySelector('.message');
+
+                                //checkbox의 여부가 바뀌었다면 change를 쓴다
+        $checkbox.addEventListener('change',e=>{  //괄호안에 파라미터 한개면 생략 가능
+            //실제로 이벤트가 일어난 요소
+            //console.log(e.target); // 이건 알아둬야 함!!!!!강사 강조
+
+
+            $em.textContent=e.target.checked?'체크됨!':'체크안됨!';
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

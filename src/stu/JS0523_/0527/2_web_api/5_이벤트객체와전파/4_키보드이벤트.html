@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <p class="msg"></p>
+    
+    <script>
+
+        const $input=document.querySelector('input');
+        const $msg=document.querySelector('.msg');
+
+                                //keyup은 누르고 올라올 때를 지정 , 누를 때는 keypress
+        $input.addEventListener('keyup',e=>{
+            console.log(e.key); //e.target 으로 작성하면 input태그를 지목함 
+
+
+            if(e.key==='Enter'){
+                $msg.textContent=e.target.value;  //e.key라고 하면 Enter가 나와서 ,value로 해야 한다.
+                e.target.value='';
+            }else if(e.key==='Escape'){
+                $msg.textContent='';
+            }
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

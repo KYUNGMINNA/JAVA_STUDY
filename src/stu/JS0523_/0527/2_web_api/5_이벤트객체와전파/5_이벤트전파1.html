@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #fruits{
+            padding: 50px;
+            border: 2px solid red;
+
+        }
+        #fruits >li{
+            background: yellow;
+            margin-bottom: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grape</li>
+    </ul>
+
+
+
+    <script>
+        const $fruits=document.getElementById('fruits');
+
+        //부모에 이벤트를 걸었이 때문에, li클릭을해도 ul에 이벤트 걸린것으로 인정됨
+        $fruits.addEventListener('click',e=>{
+            console.log('ul에 클릭 이벤트가 발생!');
+            console.log('이벤트 핸들러가 붙은 타겟 :'+e.currentTarget);
+            console.log('실제 이벤트가 발생한 요소 :'+e.target);
+        });
+
+
+        $fruits.firstElementChild.addEventListener('click',e=>{
+            console.log('apple에 클릭 이벤트가 발생!');
+
+            //이벤트 전파를 중단(버블링 방지) :: 자식요소 이벤트만 발생하고 , 부모의 이벤트 실행을 방지
+            //부모와 자식의 이벤트가 같을 때만 버블링이 실행됨
+            e.stopPropagation();
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

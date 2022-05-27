@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        1.다음 체크  박스 버튼을 클릭했을 대
+        '동의했습니다' 경고창을 띄우고 
+        value 값을 같이 찍어 주세요.
+
+
+
+    -->
+    <input type="checkbox" value="1">조항1
+    <input type="checkbox" value="2">조항2
+    <input type="checkbox" value="3">조항3
+    <input type="checkbox" value="4">조항4
+    
+    <script>
+
+    const $checkbox=document.querySelectorAll('input');
+    
+    for(let $li of [...$checkbox]){
+        $li.addEventListener('change',e=>{
+            if(e.target.checked){
+                alert('동의하셨습니다 '+e.target.value);
+
+            }
+         
+        })
+    }
+
+
+
+    
+
+
+    </script>
+
+    <br>
+
+    ID:<input type="text" id="id">
+    기억하기 <input type="checkbox" id="remember">
+    <button id="check2">확인</button>
+
+
+    <script>
+        
+        const $id=document.getElementById('id');
+        const $remember=document.getElementById('remember');
+        const $check2=document.getElementById('check2');
+
+        $check2.addEventListener('click',e=>{
+            if( $id.value.length===0){
+                alert('아이디는 필수값 입니다.');
+
+            }else{
+                if(!$remember.checked){
+                    alert('check안됨')
+                }
+      
+
+            }
+      
+            
+        });
+     
+        const $result=document.getElementById('id');
+        const $remember2=document.getElementById('remember');
+    
+        //강사 version
+        document.getElementById('check2').onclie=function(){
+            console.log('value값 :'+$result.value);
+            console.log('check값:'+$remember2.checked)
+
+            if($result.value===''){
+                alert('아이디는 필수값');
+            }else if(!$remember2.checked){
+                alert('기억하기 체크 안함');
+            }
+        }
+        
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

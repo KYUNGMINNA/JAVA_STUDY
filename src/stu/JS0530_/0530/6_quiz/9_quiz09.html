@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+    <style>
+
+        .center{
+            text-align: center;
+
+        }
+        .content{
+            border: 1px solid #777;
+
+        }
+        .content,
+        .content .left,
+        .content .right{
+            width: 50%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 5px;
+
+        }
+        .content .left,
+        .content .right{
+            float: left;
+        }
+
+        .left .inner,
+        .right .inner{
+            border: 1px solid #777;
+            height: 300px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+
+        }
+
+        .memo{
+            width: 100%;
+            height: 250px;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <header>
+            <div class="center">
+                <h2>토글 형태 활용하기</h2>
+                <button id="btn1" class="light">어둡게 보기</button>
+                <button id="btn2 class="name">이름 보기</button>
+                <button id="btn3">메모장 모드</button>
+            </div>
+    </header>
+    
+
+    <section>
+        <div class="content clearfix">
+            <div class="left">
+                <div class="inner">
+                    <img src="./img/1.jpg" alt="pic">
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="inner">
+                    <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다.</p>
+                    <a href="http://www.naver.com">네이버로 이동</a>
+                </div>
+             </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+ /*
+        어둡게보기 / 밝게 보기 모드는 
+        body의 background 색깔을 검정 / 흰색으로
+        글씨 색깔을 그에 맞춰서 흰색 / 검정으로 지정하시면 됩니다.
+        버튼 글씨 바꿔 주세요.
+        클래스 이름을 dark, light 등으로 추가해서 구분을 했습니다.
+        참고로 글씨 색깔을 바꿔줘야 하는 태그는 p, h2, a 입니다.
+        */
+
+        const $body=document.body;
+        const $btn1=document.getElementById('btn1');
+
+        //강사 version
+        const $tags=document.querySelectorAll('p,h2,a');
+        
+        $btn1.addEventListener('click',()=>{
+            if($btn1.className==='light'){
+            $body.style.background='black';
+            $body.style.color='white'
+            $btn1.textContent='밝게보기';
+            $btn1.classList.replace('light','dark');
+            }else{
+            $body.style.background='white';
+            $body.style.color='black'
+            $btn1.textContent='어둡게보기';
+            $btn1.classList.replace('dark','light');
+            }
+
+            //강사 version
+            $btn1.classList.toggle('dark');
+            if($btn1.classList.contains('dark')){
+                //다크도므
+                document.body.style.backgroundColor='black';
+                for($ele of $tags){
+                    $ele.style.color='white';
+
+                }
+                $btn1.textContent='밝게 보기';
+            }else{
+                //다크모드 X 
+                document.body.style.backgroundColor='white';
+                for($ele of $tags){
+                    $ele.style.color='black';
+
+                }
+                $btn1.textContent='어둡게 보기';
+            
+            
+            
+            
+            }
+        });
+
+
+/*
+홍길동<br>20세<br>능력단위<br>Java, Oracle, Jsp, CSS, JavaScript
+        클래스 이름을 통해서 이름 보기 모드인지를 확인.
+        안에 있는 내용들은 innerHTML로 삽입.
+        버튼도 '이름 보기', '내용 보기'로 지정.
+        p태그 안의 내용만 바꿔 주시면 됩니다.
+        */
+        const $btn2=document.getElementById('btn2');
+        $btn2.addEventListener('click',()=>{
+                if($btn2.textContent==='이름 보기'){
+
+                
+                const $p=document.querySelector('.right>.inner');
+                $p.firstElementChild.textContent='';
+                $p.firstElementChild.innerHTML+='홍길동<br>20세<br>능력단위<br>Java, Oracle, Jsp, CSS, JavaScript';
+                $btn2.textContent='내용 보기';
+            }else{
+                    const $p=document.querySelector('.right>.inner');
+                $p.firstElementChild.textContent='';
+                $p.firstElementChild.innerHTML+='자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다.';
+                $btn2.textContent='이름 보기';
+
+                }
+       
+        });
+
+        //강사version
+        const $content=document.querySelector('.right .inner >p');
+        const $a =document.querySelector('.right .inner>a');
+        $btn2.onclick=function(){
+            if($btn2.className ==='name'){
+                $content.innerHTML='홍길동<br>20세<br>능력단위<br>Java, Oracle, Jsp, CSS, JavaScript';
+                $a.style.display='none';
+                $btn2.textContent='내용 보기';
+                $btn2.className='cont';
+            }else{
+                $content.innerHTML='자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다.';
+         
+                $a.style.display='block';
+                $bt2.textContent='이름 보기';
+                $bt2.className='name';
+            }
+        }
+
+
+
+
+
+
+
+
+        /*
+        메모장 보기 모드는 textarea를 생성해서 추가.
+        클래스 이름 memo 속성을 추가해 주세요.
+        버튼 이름은 '사진 모드'로 지정해 주시면 됩니다.
+        .left 안에 있는 .inner의 모든 자식 노드를 제거하고
+        생성하신 요소를 추가해 주시면 되겠습니다.
+        */
+        const $btn3=document.getElementById('btn3');
+
+        $btn3.addEventListener('click',()=>{
+            if($btn3.textContent==='메모장 모드'){
+
+            
+            const $inner=document.querySelector('.left>.inner');
+            $inner.removeChild($inner.firstElementChild);
+            const $newtext=document.createElement('textarea');
+            $newtext.classList.add('memo');
+            $inner.appendChild($newtext);
+            $btn3.textContent='사진 모드';
+        }else{
+
+
+            const $inner=document.querySelector('.left>.inner');
+            $inner.removeChild($inner.firstElementChild);
+            const $newimg=document.createElement('img');
+
+             $newimg.src='./img/1.jpg';
+            $inner.appendChild($newimg);
+            $btn3.textContent='메모장 모드';
+        }
+
+        });
+
+
+        $btn3.onclick=function(){
+            const $inners=document.querySelector('.left > .inner');
+
+            //반복문을 쓴 이유 -> 사진 모드와 메모장 모드의 자식 요소의 개수가 다르기 때문 
+            for(let i =0;i<$inners.children.length;){
+                //반복문 안에서 자식 요소를 지울 때 , 인덱스가 하나씩 감소하게 되므로 i++은 쓰지 않는다.
+
+                //for ~of 를 쓸수 없다. 왜냐면 for -of 문은 기준이 되는 배열이나 컬렉션, 객체의 크기가 줄어들면 에러가 발생하기 때문
+                // 반복문 시작 전에 횟수를 정하고  시작하기 때문 
+
+                $inners.removeChild($inners.children[i]);
+            }
+
+            $inners.removeChild($inners.firstElementChild);
+
+
+
+            $btn3.classList.toggle('write');
+
+            if($btn3.className==='write'){
+                const $texareas=document.createElement('textarea');
+                $texareas.className='memo';
+                const $regBtn=document.createElement('button');
+                $regBtn.textContent='등록하기';
+
+                const $frag=document.createDocumentFragment();
+                $frag.appendChild($texareas);
+                $frag.appendChild($regBtn);
+
+                $inners.appendChild($frag);
+
+                $bt3.textContent='사진모드';
+            }else{
+                const $imgs=document.createElement('img');
+                $imgs.setAttribute('src','./img/1.jpg');
+                $inners.appendChild($imgs);
+
+                $btn3.textContent='메모장모드';
+
+            }
+        }
+
+
+
+
+    </script>
+
+
+
+
+    
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

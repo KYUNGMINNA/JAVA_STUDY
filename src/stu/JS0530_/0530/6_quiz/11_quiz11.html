@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        thead th,
+        tbody td{
+            border: 1px solid black;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <h2>이벤트 위임 방식으로 변경해 보세요.</h2>
+    <table>
+        <thead>
+            <th>번호</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>삭제</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>첫 글</td>
+                <td>hi</td>
+                <td><button>삭제</button></td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>두번째 글</td>
+                <td>hi</td>
+                <td><button>삭제</button></td>
+            </tr>
+ 
+            <tr>
+                <td>3</td>
+                <td>세번째 글</td>
+                <td>hi</td>
+                <td><button>삭제</button></td>
+            </tr>
+   
+            <tr>
+                <td>4</td>
+                <td>네번째 글</td>
+                <td>hi</td>
+                <td><button>삭제</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <script>
+        const $tbody=document.querySelector('tbody');
+
+                        
+        $tbody.addEventListener('click',e=>{
+                //매개변수를 선언하지 않으면 이벤트객체를 못쓰는것이 아니고
+                //event라는 이름으로바로 사용이 가능합니다. ex) event.target 이런식으로 사용 한다.
+
+
+            if(!e.target.matches('button')){
+                console.log(e.target);
+                return;
+                
+            }
+            
+            //이벤트가 발생한 타겟에만 적용시키기   :: parentElement
+            //그 삭제 버튼이 눌리면 그 삭제 버튼이 포함된 tr을 날리면 됩니다.
+            $tbody.removeChild(e.target.parentNode.parentNode); // 텍스트 노드까지 포함될 가능성 있어 elemet지향
+            //parentElement 로 사용해도 된다!!!
+            
+            //event.target.parentNode.parentNode.remove() 도 가능 하다 
+            
+            //const $btn=event.target;
+            //$btn.parent
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

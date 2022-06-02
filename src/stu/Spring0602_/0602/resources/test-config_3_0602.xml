@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 스프링 컨테이너 내에 디자인한 객체 클래스를 등록  -->
+						<!-- 등록할 클래스의 위치를 지정 -->
+	<bean id="test" class="basic.SpringTest_1_0602"/>
+
+
+
+
+	<!--  Hotel 객체와 의존객체들의 빈 등록 및 의존성 주입  -->
+	
+	<bean id="chef" class="basic.ex01.Chef_6_0602"/>
+	
+	
+	<!-- 
+		property name="set을 제외한 setter메서드의 이름"
+		
+	 -->
+	
+	
+	
+	<bean id="res" class="basic.ex01.Restaurant_5_0602">
+		<property name="chef" ref="chef"/>   
+		<!--name에는 클래스 안에 있는  변수명(set을 제외한 setter메서드의 이름 -왜냐면 setter메서드는 set+멤버변수 이기 때문) 
+		 만약 Chef.java 파일의 setter이름을 setChef123으로 작성한다면  , <property name="chef123">으로 작성하면 정상 동작 
+		 setter메서드가 setChef123이고 , <property name="chef">으로 작성하면 오류!에러!
+		 
+		 ::::ref에는 주입할 객체의 아이디를 작성  :의존성 주입-->		
+	</bean>
+
+	<bean id="hotel" class="basic.ex01.Hotel_4_0602">
+		<constructor-arg ref="res"/>   <!-- ref에 아이디를 기입 : 의존성 주입 -->
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

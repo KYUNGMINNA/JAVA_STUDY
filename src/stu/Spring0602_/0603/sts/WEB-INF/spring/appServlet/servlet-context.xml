@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet 관련 설정.-->
+	
+	<!-- 핸들러 어댑터,핸들러 매핑 객체가 개발자가 작성한 컨트롤러 등을 찾을 수 있게 설정하는 태그 
+	핸드러 어뎁터와 핸들러매핑을 사용 할수 있게 하는 태그 로 , 왜냐면 핸들러 매핑이 컨트롤러를 찾고  ,핸들러 어댑터가 찾은 컨트롤러에 잇는 메서드중
+	요청한 url과 일치하는 메서드를 찾아 호출하여 결과를 리턴하는데 이 기능을 사용하기 위해서 <annotation-driven/>태그가 필요하다
+	
+	
+	
+	@Controller 라고 작성하면 자동으로  스프링컨테이너에 빈으로 등록이 되는데 <context:component-scan>에 의해서 
+	자동으로 빈으로 등록 됨 , 컨테이너에서  등록된 빈을 찾아 ,
+	 요청 URL에 알맞은 메서드를 호출하는과정.
+	 -->
+	<annotation-driven />
+
+	<!-- 정적 자원(HTML,CSS ,js ,img ... 등등)을 절대 경로로 쉽게 맵핑해주는 태그 
+		mapping에 작성된 경로 : 외부로 노출되는 경로  , location : 실제 파일의 내부  경로  
+		
+	-->
+	<resources mapping="/resources/**" location="/resources/" />
+
+
+
+
+
+	<!-- 뷰 리졸버 빈 등록 설정  : 인터널리소스뷰리졸버 클래스파일을 빈으로 등록 -->
+	<!-- 
+		디스패처 서블릿은  컨트롤러가 리턴한 view 문자열을  뷰 리졸버에게 전달한다.
+		
+		-컨트롤러가 리턴한 view 문자열을 해석하여 경로를 만들어서 
+		파일을 찾아 응답하는 ViewResolver의 빈 등록 코드
+		-prefix,suffix 필드의 setter 주입을 통해
+		컨트롤러에서 리턴된 문자열을 조립해 줍니다.
+	
+		디스패처 서블릿에게 리턴된 문자열을 조립한 것을 전달하고 , 
+		디스패처 서블릿은 이 경로를 응답으로 내보낸다.
+	
+	 -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	
+	
+	
+	
+	<!--
+		-아노테이션을 사용하여 자동으로 빈 등록을 하게 해 주는 설정 태그 
+		-com.spring.basic 으로 경로가 시작되는 하위의 모든 클래스에서 , 
+		아노테이션으로 지정되어 있는 클래스를 찾아서 자동으로 빈 등록을 실행합니다.
+		
+		클래스위에 적혀 있는 아노테이션을 찾아 빈으로 등록 시킴 .
+	 -->
+	<context:component-scan base-package="com.spring.basic" />
+	
+	
+	
+</beans:beans>

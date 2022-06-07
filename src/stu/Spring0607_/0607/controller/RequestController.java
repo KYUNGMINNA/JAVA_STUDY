@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.basic.model.UserVO;
+
 
 
 //자동으로 스프링 컨테이너에 해당 클래스의 빈을 등록하는 아노테이션
@@ -100,20 +102,56 @@ public class RequestController {
 	}
 	 */
 
-	/*
+	/* 주로 값 한개 씩 받을 때 
+	 *  
 	 2.@requestParam 아노테이션을 이용한 요청 파라미터 처리 
 	 	@RequestParam( ("파라미터 변수명") 값을 받아서 처리할 변수명)
-	 */
+	
 	@PostMapping("join")
 	public void register(@RequestParam("userId") String id,
 			@RequestParam("userPw") String pw,
-			@RequestParam("hobby") List<String> hobbies) {
-		//List로 작성 시 값을 하나도 안주게 되면  아예 리스트 생성이 되질 않아 오류 발생
+			@RequestParam(value="hobby",required = false,defaultValue = "no hobby person") List<String> hobbies) {
+		
+		
 		System.out.println("ID :"+id);
 		System.out.println("PW : "+pw);
 		System.out.println("HOBBY :"+hobbies);
 	}
-
+	*/
+	
+	/*
+	 3.커맨드 객체를 활용한 파라미터 처리.
+	 -파라미터 데이터와 연동되는 VO 클래스가 필요합니다.
+	 */
+	@PostMapping("/join")    
+	//UserVO클래스 내부의  변수명과 ,form태그의  내부의  태그들의 name을 일치시켜야 값을 가져옴
+	public void regiseter(UserVO user) {
+		System.out.println("ID :"+user.getUserId());
+		System.out.println("PW :"+user.getUserPw());
+		System.out.println("NAME :"+user.getUserName());
+		System.out.println("hobby :"+user.getHobby());
+		
+		//값 안주면  ""  혹은  null이 온다.
+	}
+	
+	/////////////////////////////////////////////////////////
+	
+	//req-quiz 정답
+	
+	@GetMapping("/quiz")
+	public String quiz() {
+		return "request/req-quiz";
+	}
+	
+	@PostMapping("/quiz")
+	public String quiz(UserVO user) {
+		if(user.getUserId().equals("abc1234") && user.getUserPw().equals("aaa1111"))
+		return "request/login-success";
+		
+		return "request/login-fail";
+			
+		}
+	
 
 
 

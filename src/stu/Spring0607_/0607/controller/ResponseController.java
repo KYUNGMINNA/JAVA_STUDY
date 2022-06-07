@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.basic.model.UserVO;
 
@@ -69,7 +70,7 @@ public class ResponseController {
 	
 	
 	@GetMapping("/res-quiz01")
-	public void quiz() {}
+	public void resquiz() {}
 	
 
 	//커맨드 객체와 Model을 사용한 방식	
@@ -103,7 +104,7 @@ public class ResponseController {
 	
 	
 	@PostMapping("/res-login")
-	public String login(@ModelAttribute("user") UserVO user) {
+	public String reslogin(@ModelAttribute("user") UserVO user) {
 		if(user.getUserId().equals("kim123") && user.getUserPw().equals("1234"))
 			return "response/res-quiz02";
 		
@@ -111,6 +112,56 @@ public class ResponseController {
 		
 	}
 	
+	////////////////////////////////////////////////////////////////////////////
+	
+	//Redirect 처리
+	
+	//폼 화면을 보여주는 메서드 
+	@GetMapping("/login")
+	public String login() {
+		System.out.println("/lgoin : GET 요청 발생!");
+		return "response/res-redirect-form";
+	}
+	
+	@PostMapping("/login")
+	public String login(@RequestParam("userId") String id,
+			@RequestParam("userPw") String pw,
+			@RequestParam("userPwChk") String pwChk,
+			RedirectAttributes ra) {
+			//redirectAttributes 메서드를 활용하면 ,
+			//일회성으로 데이터를 화면에 전달할 수 있음 
+		
+		System.out.println("/login : POST요청 발생!");
+		System.out.println("ID :"+id);
+		System.out.println("PW :"+pw);
+		System.out.println("CHK :"+pwChk);
+		
+		if(id.equals("")) {
+			//redirect 상황에서 model 객체를 사용하게 되면 
+			//model 내부의 데이터가 재 요청이 들어올 때 파라미터 값으로 붙어서 들어옵니다.
+			//데이터가 url 주소 뒤에 ?와 함께 노출되어 전달이 됩니다.
+			//model.addAttribute("msg","아아디는 필수값이에요!");  //매개변수 Model model사용해야함
+			
+			//redirect 상황에서 일회성으로 데이터를 전송할 때 사용하는 메서드.
+			//url 뒤에 데이터가 붙지 않습니다 . 한 번 이용 후에는 알아서 소멸합니다.
+			ra.addFlashAttribute("msg", "아아디는 필수값이에요!");
+			//정상적으로 p 태그에 msg 붙음  
+			
+			return "redirect:/response/login";  
+			// /response/login URL로  재 요청이 들어감 ,즉 login()메서드 동작 
+			
+			
+			//redirect 처리를 할 때에는 , Model 활용하기가 나쁨 -- URL의 파라미터 값으로 붙기 때문
+			
+		}else if(!pw.equals(pwChk)){
+			ra.addFlashAttribute("msg", "비밀번호 확인란을 체크하세요.");
+			return "redirect:/response/login";
+		}else {
+			return null;
+		}
+		 
+		
+	}
 	
 	
 	

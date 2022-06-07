@@ -66,16 +66,46 @@ public class ResponseController {
 	}
 	
 	/////////////////////////////////////////////////////
+	
+	
 	@GetMapping("/res-quiz01")
 	public void quiz() {}
 	
 
+	//커맨드 객체와 Model을 사용한 방식	
+	/*
+	  @PostMapping("/res-login")
+	  public String login(UserVO user,Model model) {
+	  	String id=user.getUserId();
+	  	String pw=user.getUserPw();
+	  
+	  	model.addAttribute("userId",id);
+	  	
+	   if(id.equals("kim123") && pw.equals("1234"))
+	    return "response/res-quiz02";
+	  
+	  return "response/res-quiz03";
+	  
+	  }
+	  
+	  ///////////
+	    @PostMapping("/res-login")
+	    public String reslogin(@ModelAttribute("userId") String id,@RequestParam("userPw" String pw)
+	     {
+	     if(id.equals("kim1234") && pw.equals("1234"))
+	     return "response/res-quiz02";
+		
+		return "response/res-quiz03";
+	  
+	  	}
+	  
+	  */
+	
+	
 	@PostMapping("/res-login")
 	public String login(@ModelAttribute("user") UserVO user) {
 		if(user.getUserId().equals("kim123") && user.getUserPw().equals("1234"))
 			return "response/res-quiz02";
-			
-		
 		
 		return "response/res-quiz03";
 		

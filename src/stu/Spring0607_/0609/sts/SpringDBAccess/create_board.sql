@@ -1,0 +1,14 @@
+CREATE TABLE jdbc_board(
+    board_no NUMBER PRIMARY KEY,
+    wirter VARCHAR2(30) NOT NULL,
+    title VARCHAR2(100) NOT NULL,
+    content VARCHAR2(1000)
+
+);
+
+CREATE SEQUENCE bid_seq
+    START WITH 1
+    INCREMENT BY 1
+    MAXVALUE 1000
+    NOCYCLE
+    NOCACHE;

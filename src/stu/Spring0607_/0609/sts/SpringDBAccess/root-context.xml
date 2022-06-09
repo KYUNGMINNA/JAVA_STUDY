@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- JDBC, DB 관련 빈을 등록하고 관리하는 설정 파일 -->
+
+	<!-- 히카리 커넥션 풀 빈 등록 -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver" />
+		<property name="jdbcUrl"
+			value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="username" value="spring" />
+		<property name="password" value="spring" />
+	</bean>
+
+	<!-- 히카리 데이터소스 빈 등록 -->
+	<bean id="ds" class="com.zaxxer.hikari.HikariDataSource">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+
+	<!-- Spring JDBC를 사용하기 위한 핵심 객체 JdbcTemplate 클래스 빈 등록 -->
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds" />
+	</bean>
+
+	<!-- 마이바티스 SQL 동작을 위한 핵심 객체 SqlSessionFactory 클래스 빈 등록 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="ds" />
+												<!-- 패턴을 설정하여 일일히 직접 타이핑 할 필요없음 (추후에 작성 할 때 이 패턴만 지키면됌) -->
+		 <property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml"/>
+		
+		<!-- <property name="mapperLocations">
+			<array>
+			  			mapper.xml 파일이 몇 개 없으면  다 입력 할 수 있지만 굳이 그럴 필요 없다.
+				<value>classpath:/mappers/score/ScoreMapper.xml</value>
+				<value>classpath:/mappers/board/BoardMapper.xml</value>
+			</array>
+			
+		</property>
+		 -->
+
+	</bean>
+	<!--  마이바티스는 XML파일로 클래스를 만든다고 생각함면 된다. -->
+	
+									<!-- mapper인터페이스 위치를 경로만 적는다. : 인터페이스 지목할 필요는 없음 ::인터페이스를 빈으로 등록하기 위함 -->
+	<mybatis-spring:scan base-package="com.spring.db.repository"/>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

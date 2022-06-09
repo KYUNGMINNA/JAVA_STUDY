@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    
+    					<!-- 패키지명 -->
+ <mapper namespace="com.spring.db.repository.IScoreMapper">
+ 		
+ 		<!--  점수 등록 기능  -->
+ 		<insert id="insertScore">   <!--   <SQL명렁어     id="구현할 메서드 이름"  mybatis3 와서 파라미터타입 알아서 넣어줌 -->
+
+		INSERT INTO scores     <!-- ScoreVO가 파라미터인데 , getter를 부를필요 없이 변수명만 정확히 입력하면 , 값가져옴\
+		
+									scorevo의 변수이름들임 		 -->
+		VALUES(id_seq.NEXTVAL,#{stuName},#{kor},#{eng},#{math},#{total},#{average}) 		
+ 		
+ 		</insert>
+ 
+ 
+ </mapper>

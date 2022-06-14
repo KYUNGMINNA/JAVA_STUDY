@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <ul id="test">
+        <li id="tag">태그 1</li>
+        <li id="tag">태그 2</li>
+        <li id="tag">태그 3</li>
+    </ul>
+
+    <script>
+        //li태그에 모두 동일한 이벤트를 등록하자 .
+        //부모태그에 이벤트를 등록하고 oncli시 전달되는
+        //이벤트 객체를 이용해서 확인하는 방식
+
+        /*const $test=document.getElementById('test');
+        $test.addEventListener('click',function(e){
+
+             if(!e.target.matches('#test >li')){
+                 return;
+             }
+                //같은 기능 다른 코드 
+            // if(!e.target.tagName==='li'){
+            //     return;
+            // }
+
+
+            console.log(e.target.textContent);
+        });
+        */
+
+        //on(이벤트종류, 위임할 요소(전파할 대상) , 이벤트 기능 ) :: 제이쿼리 방식 
+        $('#test').on('click','li',function(){    //전파할 대상 은 태그 , 이름 ,클래스명도 가능할듯.
+            //$(this)는 이벤트가 발생한 주체(태그 혹은 요소)를 의미 .
+            console.log($(this).html());
+        });
+
+
+
+    </script>
+
+
+
+    <div id="box">
+
+
+    </div>
+    <script>
+
+        //가장 간단하게 제이쿼리 시작할 때 사용 문법 ( jquert03.html 보면 나와 있음)
+        $(function(){
+           
+            //on 함수는 실행 순서에 영향을 받지 않고 
+            //이벤트 트리거가 발생한 순간 on 함수에 지정한 이벤트를 발동시킵니다.
+            //이는 실행 순서와 상관없는 비동기 통신을 진행할 때 유리합니다.
+            $('#box').on('click','a',function(e){  
+                e.preventDefault(); //이 메서드를 사용함으로써 이벤트 막음
+                alert('실행 되나요?');
+            });
+
+            let str='';
+            str+='<a href="#">태그1</a> <br>';
+            str+='<a href="#">태그2</a> <br>';
+            str+='<a href="#">태그3</a> <br>';
+            $('#box').html(str);
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

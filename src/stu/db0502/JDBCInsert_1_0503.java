@@ -1,4 +1,4 @@
-package jdbc;
+package stu.db0502;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,9 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import oracle.net.aso.b;
+//import oracle.net.aso.b;
 
-public class JDBCInsert_0503 {
+public class JDBCInsert_1_0503 {
 
 	public static void main(String[] args) {
 

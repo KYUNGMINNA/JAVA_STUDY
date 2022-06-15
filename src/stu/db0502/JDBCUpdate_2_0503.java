@@ -1,4 +1,4 @@
-package jdbc;
+package stu.db0502;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

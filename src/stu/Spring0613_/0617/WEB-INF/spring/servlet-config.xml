@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!--정적 자원(html & css & js &img ....)등을 URI 절대 경로로 사용하기 위한 매핑 처리 -->
+	<!-- mapping : 사용자에게 노출되는 경로   , location :실제 파일 경로 -->
+	<resources mapping="/resources/**" location="/resources/" />
+	
+	
+<resources mapping="/css/**" location="/resources/css/" />
+	<resources mapping="/js/**" location="/resources/js/" />
+	<resources mapping="/img/**" location="/resources/img/" />
+	<resources mapping="/scss/**" location="/resources/scss/" />
+	<resources mapping="/vendor/**" location="/resources/vendor/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<context:component-scan base-package="com.spring.mvc" />
+	
+	
+	<!--0617   인터셉터 빈 등록 양식   -->
+	<beans:bean id="boardInterceptor" class="com.spring.mvc.board.commons.interceptor.BoardInterceptor"/>
+	
+	<!--여러개 등록 가능  -->
+	<interceptors>
+			<interceptor>
+					<!-- 어떤 url에 동작할 것인지  -->
+				<!-- <mapping path="/board/**"/>    /board로 시작하는 모든 요청에 반응 -->
+				<mapping path="/board/write"/>  
+				<mapping path="/board/content/**"/>  <!-- content는 뒤에 번호도 붙고 ,페이지도 붙고 해서  /**를 쓴다. -->
+								<!-- 응답할 빈 주입  -->
+				<beans:ref bean="boardInterceptor"/>
+				
+				
+				<!--빈 등록을 따로 하지 않고 , 바로 설정해도 된다 . 위에방법이나 , 밑에 방법 중 택 1 한다 .
+				여기서만 사용할거면 안에서 선언해도 되지만, 재활용할것이라면  빈으로 선언해 두는것이 좋다.
+				 -->
+				<!-- <beans:bean class="com.spring.mvc.board.commons.interceptor.BoardInterceptor"/>  -->
+				</interceptor>
+				
+				<interceptor>
+				<mapping path="/"/>
+				<beans:bean class="com.spring.mvc.user.commons.interceptor.AutoLoginInterceptor"/>
+				</interceptor>
+				
+				
+	</interceptors>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</beans:beans>

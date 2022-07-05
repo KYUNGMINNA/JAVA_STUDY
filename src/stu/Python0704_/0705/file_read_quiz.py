@@ -33,3 +33,32 @@ except:
 finally:
     f.close()
     #g.close()
+'''
+
+try:
+    f = open('C:/Users/user/Desktop/java_web_LKM/python/test/points.txt', 'r')
+    numlist = f.read().split()
+except:
+    print('파일 로드 실패!')
+    print(trace.format_exc()) # 자바의 printStackTrace
+finally:
+    f.close()
+
+sum = 0
+for num in numlist:
+    score = int(num)
+    sum += score
+
+avg = sum / len(numlist)
+
+try:
+    f = open('C:/Users/user/Desktop/java_web_LKM/python/test/result.txt', 'w')
+    data = f'총점: {sum}점, 평균: {avg:0.2f}점'
+    f.write(data)
+    print('파일 저장이 완료되었습니다.')
+except:
+    print('파일 저장 실패!')
+finally:
+    f.close()
+
+'''
